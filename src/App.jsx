@@ -4,26 +4,19 @@ import './App.css'
 import Header from './layouts/headers/Header'
 import Navbar from './layouts/Navbar'
 import { initFCM } from './features'
+import { useState } from 'react'
 
 function App() {
+  const [token, setToken] = useState('')
   initFCM().then((token) => {
-    console.log('token:', token)
+    setToken(token)
   })
 
   return (
     <>
       <Header />
       <div>contents</div>
-      <img
-        src={reactLogo}
-        className="react-logo"
-        alt="react logo"
-      />
-      <img
-        src={viteLogo}
-        className="vite-logo"
-        alt="vite logo"
-      />
+      {token}
       <Navbar />
     </>
   )
