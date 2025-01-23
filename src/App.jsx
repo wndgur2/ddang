@@ -1,20 +1,35 @@
 import './App.css'
-import Header from './layouts/headers/Header'
-import Navbar from './layouts/Navbar'
+import Navbar from './components/Navbar'
 import { initFCM } from './features'
-import { useState } from 'react'
+import HomePage from './pages/HomePage'
+import SearchPage from './pages/SearchPage'
+import { Route, Routes } from 'react-router-dom'
+import ExploreLayout from './layouts/ExploreLayout'
+import ProductRegisterPage from './pages/ProductRegisterPage'
+import PopupLayout from './layouts/PopupLayout'
+import BiddingListPage from './pages/BiddingListPage'
+import DefaultLayout from './layouts/DefaultLayout'
+import MyPage from './pages/MyPage'
 
 function App() {
-  const [token, setToken] = useState('')
-  initFCM().then((token) => {
-    setToken(token)
-  })
+  initFCM()
 
   return (
     <>
-      <Header />
-      <div>contents</div>
-      {token}
+      <Routes>
+        <Route path='/explore' element={<ExploreLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path='search' element={<SearchPage />} />
+        </Route>
+        <Route path='/' element={<DefaultLayout />}>
+          <Route path='bidding-list' element={<BiddingListPage />} />
+          <Route path='mypage' element={<MyPage />} />
+        </Route>
+        <Route path='/popup' element={<PopupLayout />}>
+          <Route path='product/register' element={<ProductRegisterPage />} />
+        </Route>
+        <Route path='*' element={<h1>404</h1>} />
+      </Routes>
       <Navbar />
     </>
   )
