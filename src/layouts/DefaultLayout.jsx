@@ -4,7 +4,7 @@ import DefaultHeader from '../components/headers/DefaultHeader'
 function DefaultLayout() {
   return (
     <>
-      <DefaultHeader back={false} icon={null} siblings={[]} />
+      <DefaultHeader />
       <Outlet />
     </>
   )

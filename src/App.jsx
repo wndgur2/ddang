@@ -10,6 +10,7 @@ import PopupLayout from './layouts/PopupLayout'
 import BiddingListPage from './pages/BiddingListPage'
 import DefaultLayout from './layouts/DefaultLayout'
 import MyPage from './pages/MyPage'
+import ProductDetailPage from './pages/ProductDetailPage'
 
 function App() {
   initFCM()
@@ -27,6 +28,7 @@ function App() {
         </Route>
         <Route path='/popup' element={<PopupLayout />}>
           <Route path='product/register' element={<ProductRegisterPage />} />
+          <Route path='product/:id' element={<ProductDetailPage />} />
         </Route>
         <Route path='*' element={<h1>404</h1>} />
       </Routes>

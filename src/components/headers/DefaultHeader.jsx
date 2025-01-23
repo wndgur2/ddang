@@ -5,7 +5,7 @@ function DefaultHeader({ back, icon, siblings }) {
   const router = useNavigate()
   return (
     <div>
-      <div className="flex justify-between">
+      <div className='flex justify-between'>
         {back && (
           <button
             onClick={() => {
@@ -23,8 +23,8 @@ function DefaultHeader({ back, icon, siblings }) {
   )
 }
 DefaultHeader.propTypes = {
-  back: PropTypes.bool.isRequired,
-  icon: PropTypes.string.isRequired,
-  siblings: PropTypes.array.isRequired,
+  back: PropTypes.bool,
+  icon: PropTypes.string,
+  siblings: PropTypes.array,
 }
 export default DefaultHeader

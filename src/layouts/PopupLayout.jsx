@@ -4,11 +4,7 @@ import DefaultHeader from '../components/headers/DefaultHeader'
 function PopupLayout() {
   return (
     <>
-      <DefaultHeader
-        back={true}
-        icon="icon"
-        siblings={[]}
-      />
+      <DefaultHeader back={true} icon='edit' siblings={[]} />
       <Outlet />
     </>
   )

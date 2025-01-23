@@ -1,3 +1,7 @@
 .active {
-  color: red;
+  color: var(--content-color);
+}
+
+.inactive {
+  color: var(--gray-500);
 }
