@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { useNavigate } from 'react-router-dom'
 
-function DefaultHeader({ back, icon, siblings }) {
+function DefaultHeader({ back, feature, siblings }) {
   const router = useNavigate()
   return (
     <div>
@@ -17,14 +17,14 @@ function DefaultHeader({ back, icon, siblings }) {
         )}
         <span>Defaultheader</span>
         {siblings && <span>dropdown</span>}
-        {icon && <span>{icon}</span>}
+        {feature && <span>{feature}</span>}
       </div>
     </div>
   )
 }
 DefaultHeader.propTypes = {
   back: PropTypes.bool,
-  icon: PropTypes.string,
+  feature: PropTypes.element,
   siblings: PropTypes.array,
 }
 export default DefaultHeader

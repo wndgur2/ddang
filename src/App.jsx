@@ -1,5 +1,4 @@
-import './App.css'
-import Navbar from './components/Navbar'
+import Navbar from './components/navbar/Navbar'
 import { initFCM } from './features'
 import HomePage from './pages/HomePage'
 import SearchPage from './pages/SearchPage'
@@ -11,12 +10,13 @@ import BiddingListPage from './pages/BiddingListPage'
 import DefaultLayout from './layouts/DefaultLayout'
 import MyPage from './pages/MyPage'
 import ProductDetailPage from './pages/ProductDetailPage'
+import style from './App.module.css'
 
 function App() {
   initFCM()
 
   return (
-    <>
+    <div className={`flex flex-col h-screen ${style.container}`}>
       <Routes>
         <Route path='/explore' element={<ExploreLayout />}>
           <Route index element={<HomePage />} />
@@ -33,7 +33,7 @@ function App() {
         <Route path='*' element={<h1>404</h1>} />
       </Routes>
       <Navbar />
-    </>
+    </div>
   )
 }
 

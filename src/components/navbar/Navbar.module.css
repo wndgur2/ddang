@@ -1,0 +1,16 @@
+.navbar {
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+  max-width: var(--max-width);
+  height: 64px;
+}
+
+.active {
+  color: var(--content-color);
+}
+
+.inactive {
+  color: var(--gray-500);
+}
