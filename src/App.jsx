@@ -1,10 +1,15 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Header from './components/Header'
-import Navbar from './components/Navbar'
+import Header from './layouts/headers/Header'
+import Navbar from './layouts/Navbar'
+import { initFCM } from './features'
 
 function App() {
+  initFCM().then((token) => {
+    console.log('token:', token)
+  })
+
   return (
     <>
       <Header />
