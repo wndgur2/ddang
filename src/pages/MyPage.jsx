@@ -4,7 +4,7 @@ import usePageName from '../hooks/usePageName'
 function MyPage() {
   usePageName('마이페이지')
   return (
-    <div className='flex flex-col'>
+    <>
       <MyPageMenu
         to='/payment-history'
         icon={{
@@ -76,7 +76,7 @@ function MyPage() {
         }}
         title={'앱 설정'}
       />
-    </div>
+    </>
   )
 }
 
