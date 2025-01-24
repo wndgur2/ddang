@@ -1,2 +1,4 @@
 import { initFCM } from './notification/services/initFCM'
-export { initFCM }
+import MyPageMenu from './user/components/MyPageMenu'
+
+export { initFCM, MyPageMenu }
