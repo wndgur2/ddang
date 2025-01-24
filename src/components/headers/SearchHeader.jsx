@@ -11,14 +11,14 @@ function SearchHeader() {
       <IconButton
         icon={{
           name: 'notifications',
-          size: 26,
+          size: 28,
           color: 'var(--gray-600)',
         }}
       />
       <IconButton
         icon={{
           name: 'forum',
-          size: 26,
+          size: 28,
           color: 'var(--gray-600)',
         }}
       />
