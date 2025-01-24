@@ -1,6 +1,8 @@
 import { MyPageMenu } from '../features'
+import usePageName from '../hooks/usePageName'
 
 function MyPage() {
+  usePageName('마이페이지')
   return (
     <div className='flex flex-col'>
       <MyPageMenu

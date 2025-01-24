@@ -14,7 +14,7 @@ function DefaultHeader({ back, feature, siblings, title }) {
           <IconButton
             icon={{
               name: 'keyboard_arrow_left',
-              size: 32,
+              size: 28,
             }}
             callback={() => {
               router(-1)
@@ -33,7 +33,7 @@ function DefaultHeader({ back, feature, siblings, title }) {
 }
 DefaultHeader.propTypes = {
   back: PropTypes.bool,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   siblings: PropTypes.array,
   feature: PropTypes.element,
 }
