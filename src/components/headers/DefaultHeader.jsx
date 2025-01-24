@@ -6,8 +6,10 @@ import style from './header.module.css'
 function DefaultHeader({ back, feature, siblings, title }) {
   const router = useNavigate()
   return (
-    <header className={style.header}>
-      <div className='flex justify-between'>
+    <header
+      className={`flex flex-row items-center justify-between ${style.header}`}
+    >
+      <div className='min-w-12'>
         {back && (
           <IconButton
             icon={{
@@ -19,10 +21,13 @@ function DefaultHeader({ back, feature, siblings, title }) {
             }}
           />
         )}
-        <span>{title}</span>
-        {siblings && <span>dropdown</span>}
-        {feature && <span>{feature}</span>}
       </div>
+
+      <div className='min-w-12'>
+        <p className='font-bold text-lg'>{title}</p>
+        {siblings && <span>dropdown</span>}
+      </div>
+      <div className='min-w-12'>{feature && <span>{feature}</span>}</div>
     </header>
   )
 }

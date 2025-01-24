@@ -40,10 +40,15 @@
   --max-width: 768px;
 
   --padding: 16px;
+  --icon-color: var(--gray-950);
   --content-color: var(--gray-900);
   --border-color: var(--gray-300);
   --bg-color: var(--white);
 
   border-color: var(--border-color);
   background-color: var(--gray-200);
+}
+
+input {
+  outline-color: var(--ddblue-400);
 }

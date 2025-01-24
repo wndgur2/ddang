@@ -5,7 +5,6 @@ import SearchPage from './pages/SearchPage'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import ExploreLayout from './layouts/ExploreLayout'
 import ProductRegisterPage from './pages/ProductRegisterPage'
-import PopupLayout from './layouts/PopupLayout'
 import BiddingListPage from './pages/BiddingListPage'
 import DefaultLayout from './layouts/DefaultLayout'
 import MyPage from './pages/MyPage'
@@ -27,7 +26,7 @@ function App() {
           <Route path='bidding-list' element={<BiddingListPage />} />
           <Route path='mypage' element={<MyPage />} />
         </Route>
-        <Route path='/popup' element={<PopupLayout />}>
+        <Route path='/popup' element={<DefaultLayout back />}>
           <Route path='product/register' element={<ProductRegisterPage />} />
           <Route path='product/:id' element={<ProductDetailPage />} />
         </Route>
