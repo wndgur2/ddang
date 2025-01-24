@@ -2,7 +2,7 @@ import Navbar from './components/navbar/Navbar'
 import { initFCM } from './features'
 import HomePage from './pages/HomePage'
 import SearchPage from './pages/SearchPage'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import ExploreLayout from './layouts/ExploreLayout'
 import ProductRegisterPage from './pages/ProductRegisterPage'
 import PopupLayout from './layouts/PopupLayout'
@@ -22,6 +22,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path='search' element={<SearchPage />} />
         </Route>
+        <Route path='/' element={<Navigate to='/explore' />} />
         <Route path='/' element={<DefaultLayout />}>
           <Route path='bidding-list' element={<BiddingListPage />} />
           <Route path='mypage' element={<MyPage />} />

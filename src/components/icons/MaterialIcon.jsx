@@ -1,31 +1,32 @@
 import PropTypes from 'prop-types'
 
-function FilledIcon({ name, color, size, style }) {
-  const filledIconStyle = {
-    fontVariationSettings: `'FILL' 1,
+function MaterialIcon({ name, color, size, filled, style }) {
+  const iconStyle = {
+    fontVariationSettings: `'FILL' ${filled ? 1 : 0},
     'wght' 400,
     'GRAD' 0,
     'opsz' 24`,
     color: 'var(--color-icon)',
     fontSize: 24,
   }
-  filledIconStyle.color = color
-  filledIconStyle.fontSize = size
+  iconStyle.color = color
+  iconStyle.fontSize = size
   return (
     <span
       className='material-symbols-rounded'
-      style={{ ...filledIconStyle, ...style }}
+      style={{ ...iconStyle, ...style }}
     >
       {name}
     </span>
   )
 }
 
-FilledIcon.propTypes = {
+MaterialIcon.propTypes = {
   name: PropTypes.string.isRequired,
   color: PropTypes.string,
+  filled: PropTypes.bool,
   size: PropTypes.number,
   style: PropTypes.object,
 }
 
-export default FilledIcon
+export default MaterialIcon

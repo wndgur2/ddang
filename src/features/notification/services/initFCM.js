@@ -2,8 +2,10 @@ import { initializeApp } from 'firebase/app'
 import { getMessaging, getToken } from 'firebase/messaging'
 
 export function initFCM() {
+  console.log('initialize FCM')
+
   const firebaseConfig = {
-    apiKey: 'AIzaSyA3jZLbjGiFKkW5ziiyLsufgAHyBab-B6Y',
+    apiKey: import.meta.env.VITE_FCM_PUBLIC_KEY,
     authDomain: 'heycheese-6b35b.firebaseapp.com',
     projectId: 'heycheese-6b35b',
     storageBucket: 'heycheese-6b35b.firebasestorage.app',
@@ -23,16 +25,14 @@ export function initFCM() {
 
   if (Notification.permission === 'granted') {
     return getToken(messaging, {
-      vapidKey:
-        'BO49DPqakZEYf1Ln7OebK-CTh1sN9rleZ_BIGrUxlJOdLsj4KZjtvdayVzF1Sd2FPtjJPW2rcyQOY_OonYZf86c',
+      vapidKey: import.meta.env.VITE_VAPID_KEY,
     })
   } else {
-    Notification.requestPermission().then((permission) => {
+    Notification.requestPermission().then(permission => {
       if (permission === 'granted') {
         console.log('Notification permission granted.')
         return getToken(messaging, {
-          vapidKey:
-            'BO49DPqakZEYf1Ln7OebK-CTh1sN9rleZ_BIGrUxlJOdLsj4KZjtvdayVzF1Sd2FPtjJPW2rcyQOY_OonYZf86c',
+          vapidKey: import.meta.env.VITE_VAPID_KEY,
         })
       }
     })
