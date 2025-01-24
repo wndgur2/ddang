@@ -6,7 +6,7 @@ function MaterialIcon({ name, color, size, filled, style }) {
     'wght' 400,
     'GRAD' 0,
     'opsz' 24`,
-    color: 'var(--color-icon)',
+    color: 'var(--icon-color)',
     fontSize: 24,
   }
   iconStyle.color = color
