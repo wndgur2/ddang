@@ -1,5 +1,6 @@
 .navbar {
   width: 100%;
+  max-width: var(--max-width);
   position: fixed;
   bottom: 0;
   left: inherit;
