@@ -8,7 +8,9 @@ function DefaultLayout({ back }) {
   return (
     <>
       <DefaultHeader back={back} title={title} />
-      <Outlet context={{ setTitle }} />
+      <div className='flex flex-col gap-1'>
+        <Outlet context={{ setTitle }} />
+      </div>
     </>
   )
 }

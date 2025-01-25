@@ -5,7 +5,9 @@ function ExploreLayout() {
   return (
     <>
       <SearchHeader />
-      <Outlet />
+      <div className='flex flex-col gap-1'>
+        <Outlet />
+      </div>
     </>
   )
 }
