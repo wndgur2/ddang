@@ -8,7 +8,7 @@ function Navbar() {
   }
   return (
     <nav
-      className={`flex grow flex-row justify-around items-center border-t-1i ${style.navbar}`}
+      className={`flex grow flex-row justify-around items-center bg-white ${style.navbar}`}
     >
       <NavLink className={getClassName} to='/explore' end>
         <NavButton iconName='home'>홈</NavButton>
