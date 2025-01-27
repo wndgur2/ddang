@@ -8,7 +8,7 @@ function FavoriteIcon({ liked }) {
   return (
     <MaterialIcon
       name='favorite'
-      color={liked ? 'var(--ddred-500)' : 'var(--gray-200)'}
+      color={liked ? 'var(--color-ddred-500)' : 'var(--color-gray-200)'}
       filled
       size={26}
       style={style}

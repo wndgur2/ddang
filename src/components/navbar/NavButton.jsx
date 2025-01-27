@@ -7,12 +7,12 @@ const textStyle = {
 
 function NavButton({ iconName, children }) {
   return (
-    <>
-      <div className='flex flex-col items-center justify-center py-2 px-6'>
-        <MaterialIcon name={iconName} filled />
-        <span style={textStyle}>{children}</span>
-      </div>
-    </>
+    <div className='flex flex-col items-center justify-center'>
+      <MaterialIcon name={iconName} filled />
+      <span className='whitespace-nowrap' style={textStyle}>
+        {children}
+      </span>
+    </div>
   )
 }
 

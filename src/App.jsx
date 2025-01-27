@@ -1,15 +1,17 @@
-import Navbar from './components/navbar/Navbar'
-import { initFCM } from './features'
-import HomePage from './pages/HomePage'
-import SearchPage from './pages/SearchPage'
+import {
+  initFCM,
+  MyPage,
+  HomePage,
+  ProductDetailPage,
+  ProductRegisterPage,
+  BiddingListPage,
+  SearchPage,
+} from './features'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import ExploreLayout from './layouts/ExploreLayout'
-import ProductRegisterPage from './pages/ProductRegisterPage'
-import BiddingListPage from './pages/BiddingListPage'
 import DefaultLayout from './layouts/DefaultLayout'
-import MyPage from './pages/MyPage'
-import ProductDetailPage from './pages/ProductDetailPage'
 import style from './App.module.css'
+import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
   initFCM()
@@ -30,9 +32,8 @@ function App() {
           <Route path='product/register' element={<ProductRegisterPage />} />
           <Route path='product/:id' element={<ProductDetailPage />} />
         </Route>
-        <Route path='*' element={<h1>404</h1>} />
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
-      <Navbar />
     </div>
   )
 }

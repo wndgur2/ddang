@@ -1,4 +1,5 @@
-import usePageName from '../hooks/usePageName'
+import MyPageMenu from '../components/MyPageMenu'
+import usePageName from '@/hooks/usePageName'
 
 function MyPage() {
   usePageName('마이페이지')
@@ -90,21 +91,7 @@ function MyPage() {
                 className='border-b border-gray-200'
               >
                 {menuCategory.map(menu => (
-                  <a
-                    key={menu.to}
-                    href={menu.to}
-                    className='flex items-center p-4 hover:bg-gray-100 active:bg-gray-200'
-                  >
-                    <span
-                      className='material-symbols-rounded text-gray-600 mr-4'
-                      style={{ fontSize: '24px', fontWeight: '400' }}
-                    >
-                      {menu.icon}
-                    </span>
-                    <span className='text-gray-800 font-medium'>
-                      {menu.title}
-                    </span>
-                  </a>
+                  <MyPageMenu key={menu.to} {...menu} />
                 ))}
               </div>
             ))}

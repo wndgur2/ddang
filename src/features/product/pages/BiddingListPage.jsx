@@ -1,4 +1,4 @@
-import usePageName from '../hooks/usePageName'
+import usePageName from '../../../hooks/usePageName'
 
 function BiddingListPage() {
   usePageName('입찰현황')
