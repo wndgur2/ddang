@@ -9,10 +9,7 @@ function TextArea({ label, required }) {
           {required && '*'}
         </label>
       )}
-      <input
-        type='textarea'
-        className='flex border-1 border-gray-300 rounded-md p-1.5'
-      />
+      <textarea className='flex border-1 border-gray-300 rounded-md p-1.5' />
     </div>
   )
 }

@@ -52,6 +52,16 @@
   background-color: var(--color-white);
 }
 
-input {
+input,
+textarea {
   outline-color: var(--color-ddblue-400);
+}
+
+label {
+  transition: color 0.2s;
+}
+
+label:has(+ input:focus),
+label:has(+ textarea:focus) {
+  color: var(--color-ddblue-400);
 }
