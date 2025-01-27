@@ -4,9 +4,12 @@ import MaterialIcon from '../../../components/icons/MaterialIcon'
 
 function MyPageMenu({ icon, title, to }) {
   return (
-    <Link to={to}>
-      <MaterialIcon {...icon} />
-      {title}
+    <Link
+      to={to}
+      className='flex items-center gap-2 p-4 hover:bg-gray-100 active:bg-gray-200'
+    >
+      <MaterialIcon name={icon} />
+      <span className='text-gray-800 font-medium'>{title}</span>
     </Link>
   )
 }
