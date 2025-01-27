@@ -1,4 +1,4 @@
-import usePageName from '../hooks/usePageName'
+import usePageName from '@/hooks/usePageName'
 
 function ProductDetailPage() {
   usePageName('제품상세')

@@ -1,5 +1,5 @@
-import { MyPageMenu } from '../features'
-import usePageName from '../hooks/usePageName'
+import MyPageMenu from '../components/MyPageMenu'
+import usePageName from '@/hooks/usePageName'
 
 function MyPage() {
   usePageName('마이페이지')
