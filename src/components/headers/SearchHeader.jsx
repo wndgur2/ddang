@@ -3,7 +3,7 @@ import style from './header.module.css'
 
 function SearchHeader() {
   return (
-    <header className={`flex flex-row gap-2 items-center ${style.header}`}>
+    <header className={`flex flex-row gap-3 items-center ${style.header}`}>
       <input
         className={`flex grow px-3 py-1 rounded-xl ${style.search}`}
         type='text'
@@ -12,14 +12,14 @@ function SearchHeader() {
         icon={{
           name: 'notifications',
           size: 28,
-          color: 'var(--gray-600)',
+          color: 'var(--color-gray-600)',
         }}
       />
       <IconButton
         icon={{
           name: 'forum',
           size: 28,
-          color: 'var(--gray-600)',
+          color: 'var(--color-gray-600)',
         }}
       />
     </header>
