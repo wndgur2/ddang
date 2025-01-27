@@ -5,17 +5,27 @@ function MyPage() {
 
   // 메뉴 데이터 분리
   const menus = [
-    { to: '/payment-history', icon: 'credit_card', title: '결제내역' },
-    { to: '/purchase-history', icon: 'sticky_note_2', title: '구매내역' },
-    { to: '/sales-history', icon: 'sticky_note_2', title: '판매내역' },
-    { to: '/favorites', icon: 'favorite', title: '관심목록' },
-    { to: '/gathered-items', icon: 'sort', title: '모아보기' },
-    { to: '/review-history', icon: 'for_you', title: '리뷰내역' },
-    { to: '/my-locations', icon: 'location_on', title: '내 장소' },
-    { to: '/notices', icon: 'event_note', title: '공지사항' },
-    { to: '/customer-service', icon: 'support_agent', title: '고객센터' },
-    { to: '/terms-and-policies', icon: 'sticky_note_2', title: '약관 및 정책' },
-    { to: '/app-settings', icon: 'settings', title: '앱 설정' },
+    [
+      { to: '/payment-history', icon: 'credit_card', title: '결제내역' },
+      { to: '/purchase-history', icon: 'sticky_note_2', title: '구매내역' },
+      { to: '/sales-history', icon: 'sticky_note_2', title: '판매내역' },
+      { to: '/favorites', icon: 'favorite', title: '관심목록' },
+      { to: '/gathered-items', icon: 'sort', title: '모아보기' },
+      { to: '/review-history', icon: 'for_you', title: '리뷰내역' },
+      { to: '/my-locations', icon: 'location_on', title: '내 장소' },
+    ],
+    [
+      { to: '/notices', icon: 'event_note', title: '공지사항' },
+      { to: '/customer-service', icon: 'support_agent', title: '고객센터' },
+    ],
+    [
+      {
+        to: '/terms-and-policies',
+        icon: 'sticky_note_2',
+        title: '약관 및 정책',
+      },
+      { to: '/app-settings', icon: 'settings', title: '앱 설정' },
+    ],
   ]
 
   return (
@@ -73,21 +83,31 @@ function MyPage() {
       {/* 메뉴 섹션 */}
       <section className='bg-white shadow rounded-lg divide-y divide-gray-200'>
         <nav className='flex flex-col'>
-          {menus.map(menu => (
-            <a
-              key={menu.to}
-              href={menu.to}
-              className='flex items-center p-4 hover:bg-gray-100 active:bg-gray-200'
-            >
-              <span
-                className='material-symbols-rounded text-gray-600 mr-4'
-                style={{ fontSize: '24px', fontWeight: '400' }}
+          {menus &&
+            menus.map(menuCategory => (
+              <div
+                key={menuCategory[0].to}
+                className='border-b border-gray-200'
               >
-                {menu.icon}
-              </span>
-              <span className='text-gray-800 font-medium'>{menu.title}</span>
-            </a>
-          ))}
+                {menuCategory.map(menu => (
+                  <a
+                    key={menu.to}
+                    href={menu.to}
+                    className='flex items-center p-4 hover:bg-gray-100 active:bg-gray-200'
+                  >
+                    <span
+                      className='material-symbols-rounded text-gray-600 mr-4'
+                      style={{ fontSize: '24px', fontWeight: '400' }}
+                    >
+                      {menu.icon}
+                    </span>
+                    <span className='text-gray-800 font-medium'>
+                      {menu.title}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            ))}
         </nav>
       </section>
     </div>
