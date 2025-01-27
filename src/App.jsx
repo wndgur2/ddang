@@ -17,7 +17,7 @@ function App() {
   initFCM()
 
   return (
-    <div className={`flex flex-col h-screen ${style.container}`}>
+    <div className={`h-screen ${style.container}`}>
       <Routes>
         <Route path='/explore' element={<ExploreLayout />}>
           <Route index element={<HomePage />} />

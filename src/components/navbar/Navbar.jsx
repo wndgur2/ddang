@@ -6,25 +6,22 @@ function Navbar() {
   const getClassName = ({ isActive }) => {
     return `w-1/5 ${isActive ? style.active : style.inactive}`
   }
+  const navs = [
+    { to: '/explore', iconName: 'home', text: '홈', end: true },
+    { to: '/explore/search', iconName: 'manage_search', text: '물건찾기' },
+    { to: '/popup/product/register', iconName: 'add', text: '등록' },
+    { to: '/bidding-list', iconName: 'gavel', text: '입찰현황' },
+    { to: '/mypage', iconName: 'person', text: '마이' },
+  ]
   return (
     <nav
       className={`flex grow flex-row justify-around items-center bg-white ${style.navbar}`}
     >
-      <NavLink className={getClassName} to='/explore' end>
-        <NavButton iconName='home'>홈</NavButton>
-      </NavLink>
-      <NavLink className={getClassName} to='/explore/search'>
-        <NavButton iconName='manage_search'>물건찾기</NavButton>
-      </NavLink>
-      <NavLink className={getClassName} to={'/popup/product/register'}>
-        <NavButton iconName='add'>등록</NavButton>
-      </NavLink>
-      <NavLink className={getClassName} to={'/bidding-list'}>
-        <NavButton iconName='gavel'>입찰현황</NavButton>
-      </NavLink>
-      <NavLink className={getClassName} to={'/mypage'}>
-        <NavButton iconName='person'>마이</NavButton>
-      </NavLink>
+      {navs.map((nav, index) => (
+        <NavLink key={index} className={getClassName} to={nav.to} end={nav.end}>
+          <NavButton iconName={nav.iconName}>{nav.text}</NavButton>
+        </NavLink>
+      ))}
     </nav>
   )
 }
