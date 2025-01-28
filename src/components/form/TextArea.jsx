@@ -1,14 +1,10 @@
 import PropTypes from 'prop-types'
+import Label from './Label'
 
 function TextArea({ label, required }) {
   return (
     <div className='flex flex-col gap-1 py-2'>
-      {label && (
-        <label className='font-bold text-gray-800 text-sm'>
-          {label}
-          {required && '*'}
-        </label>
-      )}
+      {label && <Label text={label} required={required} />}
       <textarea className='flex border-1 border-gray-300 rounded-md p-1.5' />
     </div>
   )

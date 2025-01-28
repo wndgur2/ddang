@@ -1,17 +1,13 @@
 import PropTypes from 'prop-types'
 import { useRef } from 'react'
+import Label from './Label'
 
 function DatePicker({ label, required }) {
   const dateInput = useRef(null)
 
   return (
     <div className='flex flex-col gap-2 py-2'>
-      {label && (
-        <label className='font-bold text-gray-800 text-sm'>
-          {label}
-          {required && '*'}
-        </label>
-      )}
+      {label && <Label text={label} required={required} />}
       <input
         ref={dateInput}
         type='datetime-local'
