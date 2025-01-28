@@ -15,7 +15,7 @@ function Navbar() {
   ]
   return (
     <nav
-      className={`flex grow flex-row justify-around items-center bg-white ${style.navbar}`}
+      className={`max-w-lg flex grow flex-row justify-around items-center bg-white ${style.navbar}`}
     >
       {navs.map((nav, index) => (
         <NavLink key={index} className={getClassName} to={nav.to} end={nav.end}>

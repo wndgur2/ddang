@@ -17,7 +17,7 @@ function App() {
   initFCM()
 
   return (
-    <div className={`${style.container}`}>
+    <div className={`max-w-lg ${style.container}`}>
       <Routes>
         <Route path='/explore' element={<ExploreLayout />}>
           <Route index element={<HomePage />} />
