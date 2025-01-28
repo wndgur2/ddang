@@ -8,7 +8,7 @@ function MyPageMenu({ icon, title, to }) {
       to={to}
       className='flex items-center gap-2 p-4 hover:bg-gray-100 active:bg-gray-200'
     >
-      <MaterialIcon name={icon} />
+      <MaterialIcon {...icon} />
       <span className='text-gray-800 font-medium'>{title}</span>
     </Link>
   )

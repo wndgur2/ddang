@@ -1,5 +1,9 @@
 import MyPageMenu from '../components/MyPageMenu'
 import usePageName from '@/hooks/usePageName'
+import MaterialIcon from '../../../components/icons/MaterialIcon'
+import ProfileImage from '../components/ProfileImage'
+import profileImage from '@/assets/profileImage.png'
+// import test from '@/assets/test.png'
 
 function MyPage() {
   usePageName('마이페이지')
@@ -31,13 +35,15 @@ function MyPage() {
   return (
     <div className='mb-16'>
       {/* 프로필 섹션 */}
-      <section className='flex items-center space-x-4 p-4 bg-white divide-y divide-gray-200'>
-        <img alt='프로필' className='w-16 h-16 rounded-full' />
+      <section className='flex items-center p-4 bg-white gap-3'>
+        <ProfileImage src={profileImage} size={64} />
         <div className='flex-1'>
           <div className='text-lg font-semibold'>성시경이타고있어요</div>
         </div>
         <button style={{ color: 'var(--color-gray-400)' }}>
-          <span className='material-symbols-rounded'>edit</span>{' '}
+          <MaterialIcon name='edit' filled>
+            edit
+          </MaterialIcon>
         </button>
       </section>
       {/* 신뢰도 섹션 */}
@@ -47,10 +53,7 @@ function MyPage() {
           <span className='text-sm font-semibold text-gray-600'>78%</span>
         </div>
         <div className='w-full bg-gray-200 rounded-full h-2.5 mt-2'>
-          <div
-            className='h-2.5 rounded-full'
-            style={{ backgroundColor: 'var(--color-ddblue-400)', width: '78%' }}
-          ></div>
+          <div className='h-2.5 rounded-full bg-ddblue-400 w-[78%]'></div>
         </div>
       </section>
       {/* 땅땅머니 섹션 */}
@@ -82,7 +85,11 @@ function MyPage() {
                 className='border-b border-gray-200'
               >
                 {menuCategory.map(menu => (
-                  <MyPageMenu key={menu.to} {...menu} />
+                  <MyPageMenu
+                    key={menu.to}
+                    {...menu}
+                    icon={{ name: menu.icon }}
+                  />
                 ))}
               </div>
             ))}
