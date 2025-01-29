@@ -13,7 +13,7 @@ function DatePicker({ label, required }) {
         ref={dateInput}
         type='datetime-local'
         value='2017-06-01T08:30'
-        className={`flex justify-between border-1 border-gray-300 rounded-md p-3 ${style.datePicker}`}
+        className={`flex w-full justify-between border-1 border-gray-300 rounded-md p-3 ${style.datePicker}`}
       />
     </div>
   )
