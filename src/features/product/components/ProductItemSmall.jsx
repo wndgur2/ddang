@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
+import { dday } from '../../../utils/Dday'
 
 function ProductItemSmall({ product }) {
   return (
-    <div className='flex flex-col '>
-      <img className='w-20' src={product.image} alt={product.title} />
+    <div className='flex flex-col flex-shrink-0'>
+      <img src={product.image} alt={product.title} className='size-32' />
       <div>
         <span>{product.title}</span>
       </div>
@@ -11,7 +12,9 @@ function ProductItemSmall({ product }) {
         {product.isTop && <span>🔥</span>}
         <span>{product.price}</span>
       </div>
-      <span>{product.closeAt}</span>
+      <span className='text-sm text-gray-600'>
+        {dday(product.closeAt)} 남음
+      </span>
     </div>
   )
 }
