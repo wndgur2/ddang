@@ -18,7 +18,7 @@ function DatePicker({ label, required }) {
   }, [date])
 
   return (
-    <div className='flex flex-col gap-2 py-2'>
+    <div className='flex flex-col gap-2 py-3'>
       {label && <Label text={label} required={required} />}
       <PickerWrapper callback={() => dateInput.current.showPicker()}>
         <InputValue value={koreanLocalDate} label={label} />
