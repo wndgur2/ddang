@@ -12,7 +12,7 @@ function ProductRegisterPage() {
   const [images, setImages] = useState([])
   usePageName('상품등록')
   return (
-    <>
+    <div className='flex flex-col p-4'>
       <ImagePicker images={images} setImages={setImages} />
       <Devider className='my-3 mb-2' />
       <TextInput label='제목' required />
@@ -27,7 +27,7 @@ function ProductRegisterPage() {
       <ModalPicker label='거래희망장소' required />
       <br />
       <DefaultButton>등록</DefaultButton>
-    </>
+    </div>
   )
 }
 
