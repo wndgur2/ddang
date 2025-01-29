@@ -15,24 +15,26 @@ function ImagePicker({ images, setImages }) {
     }
   }, [images, setImages])
   return (
-    <div className='flex flex-row flex-wrap items-center gap-2 mb-2'>
+    <div className='flex flex-row flex-wrap items-center gap-2 my-2'>
       {images.length < 10 && (
         <div
           onClick={() => inputRef.current.click()}
-          className='flex flex-col w-[18%] aspect-square items-center justify-around rounded-lg bg-gray-100 p-2 cursor-pointer'
+          className='w-[18%] aspect-square p-2
+          flex flex-col items-center justify-around rounded-lg bg-white cursor-pointer
+          border border-gray-300'
         >
           <MaterialIcon
             name='photo_camera'
             filled
             size={32}
-            color={'var(--color-gray-600)'}
+            color={'var(--color-gray-400)'}
           />
           <span
             className={`text-xs whitespace-nowrap ${
               images.length == 10 ? 'text-ddred-500' : 'text-gray-600'
             }`}
           >
-            {images.length} / 10
+            {images.length}/ 10
           </span>
         </div>
       )}

@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types'
 
-function MaterialIcon({ name, color, size, filled, style }) {
+function MaterialIcon({ name, color, size = 24, filled, style }) {
   const iconStyle = {
     fontVariationSettings: `'FILL' ${filled ? 1 : 0},
     'wght' 400,
     'GRAD' 0,
-    'opsz' 24`,
-    color: 'var(--icon-color)',
-    fontSize: 24,
+    'opsz' ${size}`,
   }
   iconStyle.color = color
   iconStyle.fontSize = size

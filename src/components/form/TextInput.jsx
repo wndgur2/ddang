@@ -3,7 +3,7 @@ import Label from './Label'
 
 function TextInput({ label, required, type = 'text' }) {
   return (
-    <div className='flex flex-col gap-2 py-2'>
+    <div className='flex flex-col gap-2 py-3'>
       {label && <Label text={label} required={required} />}
       <input
         type={type}

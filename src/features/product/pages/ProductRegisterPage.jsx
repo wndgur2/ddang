@@ -6,6 +6,7 @@ import DatePicker from '@/components/form/DatePicker'
 import ModalPicker from '@/components/form/ModalPicker'
 import ImagePicker from '../components/ImagePicker'
 import { useState } from 'react'
+import Devider from '../../../components/Devider'
 
 function ProductRegisterPage() {
   const [images, setImages] = useState([])
@@ -13,6 +14,7 @@ function ProductRegisterPage() {
   return (
     <>
       <ImagePicker images={images} setImages={setImages} />
+      <Devider className='my-3 mb-2' />
       <TextInput label='제목' required />
       <TextInput label='상품명' required />
       <ModalPicker label='카테고리' required />
