@@ -12,7 +12,7 @@ function Profile({ profileSrc, name, trustScore }) {
         <div className='ml-4'>
           <div className='flex items-center space-x-2'>
             <h3 className='text-lg font-semibold'>{name}</h3>
-            <Link to='/edit-profile'>
+            <Link to='edit-profile'>
               <button
                 style={{
                   color: 'var(--color-gray-400)',
@@ -42,7 +42,6 @@ function Profile({ profileSrc, name, trustScore }) {
             style={{ width: `${trustScore}%` }}
           ></div>
         </div>
-        <hr className='mt-5 border-gray-200' />
       </div>
     </div>
   )
