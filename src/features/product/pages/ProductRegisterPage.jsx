@@ -12,8 +12,8 @@ function ProductRegisterPage() {
       <TextInput label='제목' required />
       <TextInput label='상품명' required />
       <ModalPicker label='카테고리' required />
-      <TextInput label='최소입찰가' required />
-      <TextInput label='즉시낙찰가' />
+      <TextInput label='최소입찰가' type='number' required />
+      <TextInput label='즉시낙찰가' type='number' />
       <DatePicker label='개찰 시각' required />
       <DatePicker label='마감 시각' required />
       <TextArea label='자세한 설명' required />
