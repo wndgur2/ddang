@@ -3,7 +3,7 @@ import MyPageMenu from '../components/MyPageMenu'
 import usePageName from '@/hooks/usePageName'
 import profileImage from '@/assets/profileImage.png'
 import Profile from '../components/Profile'
-import moneyBag from '@/assets/moneyBag.png'
+import moneyBag2 from '@/assets/moneyBag2.png'
 
 function MyPage() {
   usePageName('마이페이지')
@@ -47,7 +47,7 @@ function MyPage() {
       <section className='p-4 bg-white border-b border-gray-200 mt-0'>
         <div className='flex items-center justify-between'>
           <div className='flex items-center space-x-2'>
-            <img src={moneyBag} alt='moneyBag' className='w-6 h-6' />
+            <img src={moneyBag2} alt='moneyBag2' className='w-6 h-6' />
             <span className='text-lg font-[Inter] font-bold text-[16px] text-gray-950'>
               땅땅머니
             </span>
