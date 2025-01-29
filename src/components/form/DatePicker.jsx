@@ -2,6 +2,8 @@ import PropTypes from 'prop-types'
 import { useMemo, useRef, useState } from 'react'
 import Label from './Label'
 import MaterialIcon from '../icons/MaterialIcon'
+import InputValue from './InputValue'
+import PickerWrapper from './PickerWrapper'
 
 function DatePicker({ label, required }) {
   const dateInput = useRef(null)
@@ -16,19 +18,10 @@ function DatePicker({ label, required }) {
   }, [date])
 
   return (
-    <div className='flex flex-col gap-2 py-2 w-full'>
+    <div className='flex flex-col gap-2 py-2'>
       {label && <Label text={label} required={required} />}
-      <div
-        className='flex justify-between items-center border-1 border-gray-300 rounded-md p-3'
-        onClick={() => dateInput.current.showPicker()}
-      >
-        {koreanLocalDate ? (
-          <div className='flex gap-2 items-center'>
-            <span className='text-gray-800'>{koreanLocalDate}</span>
-          </div>
-        ) : (
-          <span className='text-gray-500'>선택된 {label} 없음</span>
-        )}
+      <PickerWrapper callback={dateInput.current.showPicker}>
+        <InputValue value={koreanLocalDate} label={label} />
         <input
           ref={dateInput}
           value={date}
@@ -37,7 +30,7 @@ function DatePicker({ label, required }) {
           className='fixed bottom-0 opacity-0 pointer-events-none'
         />
         <MaterialIcon name='calendar_month' />
-      </div>
+      </PickerWrapper>
     </div>
   )
 }
