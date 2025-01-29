@@ -5,12 +5,14 @@ import types from '../data/homeProductTypes'
 
 function HomePage() {
   return (
-    <div className='flex flex-col gap-2'>
+    <div>
       <HomeMainSlider />
-      <HomeBiddingList />
-      {types.map(type => (
-        <HomeProductList key={type.key} type={type} />
-      ))}
+      <div className='flex flex-col gap-2 p-4'>
+        <HomeBiddingList />
+        {types.map(type => (
+          <HomeProductList key={type.key} type={type} />
+        ))}
+      </div>
     </div>
   )
 }

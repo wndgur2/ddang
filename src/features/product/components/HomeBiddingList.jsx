@@ -12,7 +12,7 @@ function HomeBiddingList() {
           icon: 'person_raised_hand',
         }}
       />
-      <div className='flex flex-row'>
+      <div className='flex flex-row overflow-x-scroll'>
         {products.map(product => (
           <ProductItemSmall key={product.id} product={product} />
         ))}
