@@ -1,9 +1,9 @@
+import { Link } from 'react-router-dom'
 import MyPageMenu from '../components/MyPageMenu'
 import usePageName from '@/hooks/usePageName'
-import MaterialIcon from '../../../components/icons/MaterialIcon'
-import ProfileImage from '../components/ProfileImage'
 import profileImage from '@/assets/profileImage.png'
-// import test from '@/assets/test.png'
+import Profile from '../components/Profile'
+import moneyBag from '@/assets/moneyBag.png'
 
 function MyPage() {
   usePageName('마이페이지')
@@ -35,48 +35,48 @@ function MyPage() {
   return (
     <div className='mb-16'>
       {/* 프로필 섹션 */}
-      <section className='flex items-center p-4 bg-white gap-3'>
-        <ProfileImage src={profileImage} size={64} />
-        <div className='flex-1'>
-          <div className='text-lg font-semibold'>성시경이타고있어요</div>
-        </div>
-        <button style={{ color: 'var(--color-gray-400)' }}>
-          <MaterialIcon name='edit' filled>
-            edit
-          </MaterialIcon>
-        </button>
+      <section className='p-4 bg-white font-[Inter] text-[16px] text-gray-950 font-bold'>
+        <Profile
+          profileSrc={profileImage}
+          name='성시경이타고있어요'
+          trustScore={78}
+        />
       </section>
-      {/* 신뢰도 섹션 */}
-      <section className='p-4 bg-white border-b border-gray-200'>
-        <div className='flex justify-between items-center'>
-          <span className='text-sm font-semibold text-gray-600'>신뢰도</span>
-          <span className='text-sm font-semibold text-gray-600'>78%</span>
-        </div>
-        <div className='w-full bg-gray-200 rounded-full h-2.5 mt-2'>
-          <div className='h-2.5 rounded-full bg-ddblue-400 w-[78%]'></div>
-        </div>
-      </section>
+
       {/* 땅땅머니 섹션 */}
-      <section className='p-4 bg-white border-b border-gray-200'>
-        <div className='flex justify-between items-center'>
-          <div>
-            <div className='flex items-center space-x-2'>
-              <span className='text-lg font-semibold'>땅땅머니</span>
-            </div>
-            <div className='text-sm text-gray-600 mt-2'>
-              잔액 <span className='font-semibold'>270,000원</span>
-            </div>
-            <div className='text-sm text-gray-600'>
-              입찰가능금액 <span className='font-semibold'>70,000원</span>
-            </div>
+      <section className='p-4 bg-white border-b border-gray-200 mt-0'>
+        <div className='flex items-center justify-between'>
+          <div className='flex items-center space-x-2'>
+            <img src={moneyBag} alt='moneyBag' className='w-6 h-6' />
+            <span className='text-lg font-[Inter] font-bold text-[16px] text-gray-950'>
+              땅땅머니
+            </span>
           </div>
-          <button className='bg-blue-500 text-white text-sm px-4 py-2 rounded-lg'>
-            충전
-          </button>
+          <div>
+            <Link to='/charge'>
+              <button
+                className='bg-gray-100 text-gray-950 text-xs px-2 py-1 rounded-full'
+                style={{ cursor: 'pointer' }}
+              >
+                충전
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div className='mt-2'>
+          <div className='flex justify-between font-[Inter] font-bold text-[14px] text-gray-950 mt-4'>
+            <span>잔액</span>
+            <span>270,000원</span>
+          </div>
+          <div className='flex justify-between font-[Inter] font-bold text-[14px] text-gray-950 mt-4'>
+            <span>입찰가능금액</span>
+            <span>70,000원</span>
+          </div>
         </div>
       </section>
+
       {/* 메뉴 섹션 */}
-      <section className='bg-white shadow rounded-lg divide-y divide-gray-200'>
+      <section className='bg-white divide-y divide-gray-200'>
         <nav className='flex flex-col'>
           {menus &&
             menus.map(menuCategory => (
