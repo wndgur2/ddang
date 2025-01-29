@@ -49,6 +49,7 @@
 
   border-color: var(--border-color);
   background-color: var(--color-gray-300);
+  font-family: 'Inter', sans-serif;
 }
 
 input,
