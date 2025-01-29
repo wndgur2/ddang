@@ -2,6 +2,8 @@ import PropTypes from 'prop-types'
 import useModal from '../../hooks/useModal'
 import Modal from '../modals/Modal'
 import MaterialIcon from '../icons/MaterialIcon'
+import InputValue from './InputValue'
+import PickerWrapper from './PickerWrapper'
 
 function ModalPicker({ label, required }) {
   const { isOpen, open, close, value, setValue } = useModal()
@@ -14,19 +16,10 @@ function ModalPicker({ label, required }) {
             {required && '*'}
           </label>
         )}
-        <div
-          className='flex justify-between items-center border-1 border-gray-300 rounded-md p-3'
-          onClick={open}
-        >
-          {value ? (
-            <div className='flex gap-2 items-center'>
-              <span className='text-gray-800'>{value}</span>
-            </div>
-          ) : (
-            <span className='text-gray-500'>선택된 {label} 없음</span>
-          )}
+        <PickerWrapper callback={open}>
+          <InputValue value={value} label={label} />
           <MaterialIcon name='chevron_right' />
-        </div>
+        </PickerWrapper>
       </div>
       {isOpen && (
         <Modal close={close} setValue={setValue}>
