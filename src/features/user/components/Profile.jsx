@@ -2,16 +2,20 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import ProfileImage from './ProfileImage'
 import MaterialIcon from '../../../components/icons/MaterialIcon'
+import TrustScoreBar from './TrustScoreBar'
+import StepTrustBar from './StepTrustBar'
 
-function Profile({ profileSrc, name, trustScore }) {
+function Profile({ profileSrc, name, trustScore, id }) {
+  const userId = 1 // 로그인한 사용자의 id
+
   return (
     <div className='p-4 bg-white'>
       {/* 프로필 이미지 및 이름 섹션 */}
       <div className='flex items-center'>
         <ProfileImage src={profileSrc} size={64} />
-        <div className='ml-4'>
-          <div className='flex items-center space-x-2'>
-            <h3 className='text-lg font-semibold'>{name}</h3>
+        <div className='flex flex-row justify-between items-center w-full ml-4'>
+          <p className='text-md font-semibold'>{name}</p>
+          {userId === id ? (
             <Link to='edit-profile'>
               <button
                 style={{
@@ -26,7 +30,13 @@ function Profile({ profileSrc, name, trustScore }) {
                 </MaterialIcon>
               </button>
             </Link>
-          </div>
+          ) : (
+            <Link to='gathered-items'>
+              <button className='text-sm bg-gray-100 text-black py-2 px-2 rounded-lg cursor-pointer'>
+                구독하기
+              </button>
+            </Link>
+          )}
         </div>
       </div>
 
@@ -36,11 +46,10 @@ function Profile({ profileSrc, name, trustScore }) {
           <p className='text-ddblue-400 font-bold text-[14px]'>신뢰도</p>
           <span className='text-sm font-bold'>{trustScore}%</span>
         </div>
-        <div className='w-full bg-gray-200 h-2 rounded-full overflow-hidden mt-4'>
-          <div
-            className='h-full rounded-full bg-ddblue-400 text-[14px]'
-            style={{ width: `${trustScore}%` }}
-          ></div>
+        <div className='mt-4'>
+          {/* 5단계 중 현재 3단계 */}
+          <TrustScoreBar trustScore={12} />
+          {/* <StepTrustBar steps={5} currentStep={2} /> */}
         </div>
       </div>
     </div>
@@ -48,9 +57,10 @@ function Profile({ profileSrc, name, trustScore }) {
 }
 
 Profile.propTypes = {
-  profileSrc: PropTypes.string.isRequired, // 프로필 이미지 경로
-  name: PropTypes.string.isRequired, // 이름
-  trustScore: PropTypes.number.isRequired, // 신뢰도 (0~100)
+  profileSrc: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  trustScore: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
 }
 
 export default Profile
