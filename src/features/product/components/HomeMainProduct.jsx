@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
-import { wonitzie } from '../../../utils/wonitize'
 import { dday } from '../../../utils/Dday'
 
 function HomeMainProduct({ product, index, size }) {
+  const price = Intl.NumberFormat('ko-KR').format(product.price)
   return (
     <div className='relative aspect-square w-full flex-shrink-0 snap-center'>
       <div className='bg-white brightness-96'>
@@ -20,9 +20,9 @@ function HomeMainProduct({ product, index, size }) {
           <span>{'twinkay'}님을 위한 상품</span>
           <span>{dday(product.closeAt)} 남음</span>
         </div>
-        <p className='text-lg font-bold text-gray-100 mt-2'>{product.name}</p>
-        <div className='flex justify-between items-end text-sm text-gray-50'>
-          <span className='text-xl font-bold'>{wonitzie(product.price)}</span>
+        <p className='text-lg font-bold text-gray-100 mt-4'>{product.name}</p>
+        <div className='flex justify-between items-end text-sm '>
+          <span className='text-xl font-bold tracking-wide'>{price}원</span>
           <span className='text-gray-50'>
             {index} / {size}
           </span>

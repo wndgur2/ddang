@@ -23,14 +23,14 @@ function ProductItemSmall({ product }) {
       <span className='text-gray-800 mt-1 mb-0.5 w-fit'>{title}</span>
       {product.isTop ? (
         <div
-          className='w-fit h-fit px-1 flex flex-row items-center gap-0.5
+          className='w-fit h-fit px-1.5 flex flex-row items-center
           rounded-lg bg-ddblue-400 text-white'
         >
           <MaterialIcon name='crown' filled size={20} />
           <span className='font-bold'>{price}</span>
         </div>
       ) : (
-        <div className='flex flex-row items-center whitespace-nowrap gap-1'>
+        <div className='flex flex-row items-center whitespace-nowrap gap-0.5'>
           <div
             className='flex items-center px-1 py-0.5 rounded-lg bg-gray-400
             text-xs text-white font-bold'
