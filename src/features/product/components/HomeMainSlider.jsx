@@ -1,12 +1,19 @@
-import ImageSlider from './ImageSlider'
 import products from '../data/products'
+import Slider from '../../../components/Slider'
+import HomeMainProduct from './HomeMainProduct'
 
 function HomeMainSlider() {
-  const images = products.map(product => product.image)
   return (
-    <div>
-      <ImageSlider images={images} />
-    </div>
+    <Slider>
+      {products.map((product, index) => (
+        <HomeMainProduct
+          key={index}
+          index={index + 1}
+          size={products.length}
+          product={product}
+        />
+      ))}
+    </Slider>
   )
 }
 

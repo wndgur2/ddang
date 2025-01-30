@@ -10,7 +10,7 @@ function FavoriteIcon({ liked }) {
       name='favorite'
       color={liked ? 'var(--color-ddred-500)' : 'var(--color-gray-200)'}
       filled
-      size={26}
+      size={32}
       style={style}
     />
   )

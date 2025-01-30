@@ -2,22 +2,14 @@ import PropTypes from 'prop-types'
 import MaterialIcon from '../../../components/icons/MaterialIcon'
 import { dday } from '../../../utils/Dday'
 import { trimText } from '../../../utils/trimText'
+import ProductImage from './ProductImage'
 
 function ProductItemVertical({ product }) {
   const title = trimText(product.title, 15)
   const price = new Intl.NumberFormat('ko-KR').format(product.price)
   return (
     <div className='flex flex-col'>
-      <div
-        className='w-full aspect-square flex items-center
-        brightness-97 bg-white rounded-xl overflow-hidden'
-      >
-        <img
-          src={product.image}
-          alt={product.title}
-          className='object-contain'
-        />
-      </div>
+      <ProductImage product={product} />
       <div className='flex flex-col px-0.5 mt-1'>
         <span className='text-gray-800 text-sm'>{title}</span>
         <span className='text-gray-950 font-bold h-fit leading-none'>

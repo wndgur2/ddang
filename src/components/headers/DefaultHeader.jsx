@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types'
 import { useNavigate } from 'react-router-dom'
 import IconButton from '../buttons/IconButton'
-import style from './header.module.css'
 
 function DefaultHeader({ back, feature, siblings, title }) {
   const router = useNavigate()
   return (
     <header
-      className={`flex flex-row items-center justify-between ${style.header}`}
+      className={`
+        w-full h-[56px] px-4 py-2
+        flex flex-row items-center justify-between
+        border-b border-gray-200`}
     >
       <div className='min-w-12'>
         {back && (

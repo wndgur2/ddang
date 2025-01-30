@@ -20,7 +20,7 @@ function ProductItemSmall({ product }) {
         className='w-full aspect-square rounded-xl object-cover bg-white'
         style={{ filter: 'brightness(0.96)' }}
       />
-      <span className='text-gray-800 mt-0.5 w-fit'>{title}</span>
+      <span className='text-gray-800 mt-1 mb-0.5 w-fit'>{title}</span>
       {product.isTop ? (
         <div
           className='w-fit h-fit px-1 flex flex-row items-center gap-0.5
