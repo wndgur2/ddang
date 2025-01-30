@@ -14,6 +14,7 @@ import DefaultLayout from './layouts/DefaultLayout'
 import NotFoundPage from './pages/NotFoundPage'
 import SignupPage from './features/user/pages/SignupPage'
 import LoginPage from './features/user/pages/LoginPage'
+import ProductListPage from './features/product/pages/ProductListPage'
 
 function App() {
   initFCM()
@@ -25,6 +26,7 @@ function App() {
         <Route path='/explore' element={<ExploreLayout />}>
           <Route index element={<HomePage />} />
           <Route path='search' element={<SearchPage />} />
+          <Route path='search/products' element={<ProductListPage />} />
         </Route>
         <Route path='/' element={<DefaultLayout />}>
           <Route path='bidding-list' element={<BiddingListPage />} />

@@ -14,7 +14,7 @@ export default [
   },
   {
     id: 9,
-    title: '갤럭시 울트라 24 왜캐 이쁨?',
+    title: '갤럭시 울트라 24 완전 굿',
     price: 1800000,
     name: '삼성 갤럭시S24 울트라',
     isTop: false,
