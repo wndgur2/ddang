@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import MyPageMenu from '../components/MyPageMenu'
 import usePageName from '@/hooks/usePageName'
-import profileImage from '@/assets/profileImage.png'
+import profileImage from '@/assets/images/profileImage.png'
 import Profile from '../components/Profile'
-import moneyBag2 from '@/assets/moneyBag2.png'
+import moneyBag2 from '@/assets/images/moneyBag2.png'
 import menus from '../data/menus'
 
 function MyPage() {

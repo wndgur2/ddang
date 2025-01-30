@@ -1,5 +1,6 @@
 import { initFCM } from './notification/services/initFCM'
 import MyPage from './user/pages/MyPage'
+import WelcomePage from './user/pages/WelcomePage'
 import HomePage from './product/pages/HomePage'
 import ProductDetailPage from './product/pages/ProductDetailPage'
 import ProductRegisterPage from './product/pages/ProductRegisterPage'
@@ -14,4 +15,5 @@ export {
   BiddingListPage,
   SearchPage,
   MyPage,
+  WelcomePage,
 }

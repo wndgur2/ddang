@@ -6,24 +6,26 @@ import {
   ProductRegisterPage,
   BiddingListPage,
   SearchPage,
+  WelcomePage,
 } from './features'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import ExploreLayout from './layouts/ExploreLayout'
 import DefaultLayout from './layouts/DefaultLayout'
-import style from './App.module.css'
 import NotFoundPage from './pages/NotFoundPage'
+import SignupPage from './features/user/pages/SignupPage'
+import LoginPage from './features/user/pages/LoginPage'
 
 function App() {
   initFCM()
 
   return (
-    <div className={`max-w-lg ${style.container} overflow-x-hidden`}>
+    <div className={`w-full h-dvh mx-auto bg-white max-w-lg overflow-x-hidden`}>
       <Routes>
+        <Route path='/' element={<WelcomePage />} />
         <Route path='/explore' element={<ExploreLayout />}>
           <Route index element={<HomePage />} />
           <Route path='search' element={<SearchPage />} />
         </Route>
-        <Route path='/' element={<Navigate to='/explore' />} />
         <Route path='/' element={<DefaultLayout />}>
           <Route path='bidding-list' element={<BiddingListPage />} />
           <Route path='mypage' element={<MyPage />} />
@@ -31,6 +33,8 @@ function App() {
         <Route path='/popup' element={<DefaultLayout back />}>
           <Route path='product/register' element={<ProductRegisterPage />} />
           <Route path='product/:id' element={<ProductDetailPage />} />
+          <Route path='signup' element={<SignupPage />} />
+          <Route path='login' element={<LoginPage />} />
         </Route>
         <Route path='*' element={<NotFoundPage />} />
       </Routes>

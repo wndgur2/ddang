@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom'
 import IconButton from '../buttons/IconButton'
 
 function SearchHeader() {
+  const route = useNavigate()
   return (
     <header
       className={`
@@ -19,6 +21,7 @@ function SearchHeader() {
           size: 28,
           color: 'var(--color-gray-600)',
         }}
+        callback={() => route('/')}
       />
       <IconButton
         icon={{
