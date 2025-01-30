@@ -4,12 +4,14 @@ import { dday } from '../../../utils/Dday'
 
 function HomeMainProduct({ product, index, size }) {
   return (
-    <div className='aspect-square w-full flex-shrink-0 snap-center'>
-      <img
-        src={product.image}
-        alt='product'
-        className='aspect-square w-full object-contain'
-      />
+    <div className='relative aspect-square w-full flex-shrink-0 snap-center'>
+      <div className='bg-white brightness-96'>
+        <img
+          src={product.image}
+          alt='product'
+          className='aspect-square w-full object-contain'
+        />
+      </div>
       <div
         className='absolute z-1 w-full bottom-0 px-3 py-2 text-white'
         style={{ backgroundColor: '#00000060' }}
