@@ -8,7 +8,7 @@ const textStyle = {
 function NavButton({ iconName, children }) {
   return (
     <div className='flex flex-col items-center justify-center'>
-      <MaterialIcon name={iconName} filled />
+      <MaterialIcon name={iconName} filled size={26} />
       <span className='whitespace-nowrap' style={textStyle}>
         {children}
       </span>
