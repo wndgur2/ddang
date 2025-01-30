@@ -10,7 +10,7 @@ function StepTrustBar({ steps }) {
   }
 
   return (
-    <div className='relative w-full'>
+    <div className='relative w-full flex flex-col items-center'>
       {/* 배경 막대 */}
       <div className='w-full bg-gray-200 h-2 rounded-full'></div>
 
@@ -23,7 +23,7 @@ function StepTrustBar({ steps }) {
       ></div>
 
       {/* 단계 표시 원 */}
-      <div className='flex justify-between w-full relative z-10'>
+      <div className='flex justify-between w-[98%] relative z-10'>
         {Array.from({ length: steps }).map((_, index) => (
           <div
             key={index}
@@ -33,7 +33,6 @@ function StepTrustBar({ steps }) {
             } rounded-full cursor-pointer`}
             style={{
               position: 'absolute',
-              top: '50%',
               left: `${(index / (steps - 1)) * 100}%`,
               transform: 'translate(-50%, -100%) scale(0.8)', // 중앙 정렬 및 크기 조정
             }}

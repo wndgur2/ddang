@@ -16,6 +16,7 @@ function MyPage() {
         profileSrc={profileImage}
         name='성시경이타고있어요'
         trustScore={78}
+        id={123}
       />
       <hr className='border-gray-200' />
 
