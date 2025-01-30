@@ -13,7 +13,7 @@ function HomeBiddingList() {
         }}
       />
       <div
-        className='flex flex-row gap-2
+        className='flex flex-row gap-2 pb-3
         overflow-x-scroll snap-x snap-madatory'
       >
         {products.map(product => (

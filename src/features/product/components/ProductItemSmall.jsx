@@ -9,7 +9,7 @@ function ProductItemSmall({ product }) {
   const title = trimText(product.title, 7)
   return (
     <div
-      className='flex flex-col flex-shrink-0 snap-center whitespace-nowrap'
+      className='flex flex-col flex-shrink-0 snap-center whitespace-nowrap text-sm'
       style={{
         width: 'calc(33% - var(--spacing))',
       }}
@@ -27,12 +27,12 @@ function ProductItemSmall({ product }) {
           rounded-lg bg-ddblue-400 text-white'
         >
           <MaterialIcon name='crown' filled size={20} />
-          <span className='font-bold text-md'>{price}</span>
+          <span className='font-bold'>{price}</span>
         </div>
       ) : (
         <div className='flex flex-row items-center whitespace-nowrap gap-1'>
           <div
-            className='flex items-center p-1 rounded-lg bg-gray-400
+            className='flex items-center px-1 py-0.5 rounded-lg bg-gray-400
             text-xs text-white font-bold'
           >
             뺏김

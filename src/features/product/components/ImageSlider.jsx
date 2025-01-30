@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 // to elements not only images
 function ImageSlider({ images }) {
   return (
-    <div className='flex flex-row flex-nowrap overflow-x-scroll snap-x snap-mandatory'>
+    <div className='flex flex-row flex-nowrap overflow-x-scroll snap-x snap-mandatory bg-white brightness-97'>
       {images.map((image, index) => (
         <div
           key={index}
@@ -12,7 +12,7 @@ function ImageSlider({ images }) {
           <img
             src={image}
             alt='product'
-            className='aspect-square w-full object-cover'
+            className='aspect-square w-full object-contain'
           />
         </div>
       ))}

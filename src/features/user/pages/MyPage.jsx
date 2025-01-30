@@ -10,7 +10,7 @@ function MyPage() {
   usePageName('마이페이지')
 
   return (
-    <div className='mb-16'>
+    <div>
       {/* 프로필 섹션 */}
       <Profile
         profileSrc={profileImage}
