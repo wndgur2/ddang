@@ -10,6 +10,7 @@ function DefaultLayout({ back }) {
     <>
       <DefaultHeader back={back} title={title} />
       <Outlet context={{ setTitle }} />
+      {back || <div className='py-8'></div>}
       {back || <Navbar />}
     </>
   )

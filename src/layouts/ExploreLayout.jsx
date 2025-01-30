@@ -6,6 +6,7 @@ function ExploreLayout() {
     <>
       <SearchHeader />
       <Outlet />
+      <div className='py-12'></div>
       <Navbar />
     </>
   )
