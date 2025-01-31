@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import RegisteredImage from './RegisteredImage'
-import MaterialIcon from '../../../components/icons/MaterialIcon'
+import MaterialIcon from '@/components/icons/MaterialIcon'
 import { useEffect, useRef } from 'react'
 
 function ImagePicker({ images, setImages }) {

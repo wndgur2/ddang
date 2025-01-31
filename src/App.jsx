@@ -16,7 +16,7 @@ import SignupPage from './features/user/pages/SignupPage'
 import LoginPage from './features/user/pages/LoginPage'
 import ProductListPage from './features/product/pages/ProductListPage'
 import EditProfilePage from './features/user/pages/EditProfilePage'
-import ChargePage from './features/user/pages/ChargePage'
+import ChargePage from './features/payment/pages/ChargePage'
 import PaymentHistory from './features/payment/pages/PaymentHistory'
 
 function App() {
@@ -40,11 +40,11 @@ function App() {
           <Route path='product/:id' element={<ProductDetailPage />} />
           <Route path='signup' element={<SignupPage />} />
           <Route path='login' element={<LoginPage />} />
-          <Route path='mypage/edit-profile' element={<EditProfilePage />} />
-          <Route path='mypage/charge' element={<ChargePage />} />
         </Route>
         <Route path='/mypage' element={<DefaultLayout back />}>
           <Route path='payment-history' element={<PaymentHistory />} />
+          <Route path='edit-profile' element={<EditProfilePage />} />
+          <Route path='charge' element={<ChargePage />} />
         </Route>
         <Route path='*' element={<NotFoundPage />} />
       </Routes>

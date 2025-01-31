@@ -1,4 +1,4 @@
-import MaterialIcon from '../../../components/icons/MaterialIcon'
+import MaterialIcon from '@/components/icons/MaterialIcon'
 import SearchHistory from './SearchHistory'
 import categories from '../data/categories'
 import bag from '@/assets/images/categories/bag.jpeg'

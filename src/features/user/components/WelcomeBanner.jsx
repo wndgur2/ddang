@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import MaterialIcon from '../../../components/icons/MaterialIcon'
+import MaterialIcon from '@/components/icons/MaterialIcon'
 
 function WelcomeBanner() {
   const location = useLocation()

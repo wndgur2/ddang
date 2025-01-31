@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import ProductImage from './ProductImage'
-import { trimText } from '../../../utils/trimText'
-import { dday } from '../../../utils/Dday'
-import MaterialIcon from '../../../components/icons/MaterialIcon'
+import { trimText } from '@/utils/trimText'
+import { dday } from '@/utils/Dday'
+import MaterialIcon from '@/components/icons/MaterialIcon'
 import { Link } from 'react-router-dom'
 
 function ProductListItem({ product }) {

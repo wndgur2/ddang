@@ -3,7 +3,7 @@ import FilterChipArray from '../components/FilterChipArray.jsx'
 import FilterChipBool from '../components/FilterChipBool.jsx'
 import ProductListItem from '../components/ProductListItem.jsx'
 import products from '../data/products.js'
-import MaterialIcon from '../../../components/icons/MaterialIcon.jsx'
+import MaterialIcon from '@/components/icons/MaterialIcon.jsx'
 
 function ProductListPage() {
   const [isBidding, setIsBidding] = useState(false)

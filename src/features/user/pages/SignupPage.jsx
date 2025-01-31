@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom'
-import DefaultButton from '../../../components/buttons/DefaultButton'
-import TextInput from '../../../components/form/TextInput'
-import usePageName from '../../../hooks/usePageName'
-import StickyContainer from '../../../components/StickyContainer'
+import DefaultButton from '@/components/buttons/DefaultButton'
+import TextInput from '@/components/form/TextInput'
+import usePageName from '@/hooks/usePageName'
+import StickyContainer from '@/components/StickyContainer'
 
 function SignupPage() {
   usePageName('회원가입')

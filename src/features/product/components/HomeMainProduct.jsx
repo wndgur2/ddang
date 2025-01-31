@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { dday } from '../../../utils/Dday'
+import { dday } from '@/utils/Dday'
 import { Link } from 'react-router-dom'
 
 function HomeMainProduct({ product, index, size }) {
