@@ -17,7 +17,7 @@ import LoginPage from './features/user/pages/LoginPage'
 import ProductListPage from './features/product/pages/ProductListPage'
 import EditProfilePage from './features/user/pages/EditProfilePage'
 import ChargePage from './features/user/pages/ChargePage'
-import PaymentHistory from './features/payment/pages/
+import PaymentHistory from './features/payment/pages/'
 
 function App() {
   initFCM()
