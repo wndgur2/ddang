@@ -4,12 +4,11 @@ import { dday } from '../../../utils/Dday'
 import { trimText } from '../../../utils/trimText'
 import ProductImage from './ProductImage'
 import { Link } from 'react-router-dom'
-
 function ProductItemVertical({ product }) {
   const title = trimText(product.title, 15)
-  const price = new Intl.NumberFormat('ko-KR').format(product.price)
+  const price = new Intl.NumberFormat('ko-KR').format(product.currentBidPrice)
   return (
-    <Link className='flex flex-col' to={`/popup/product/${product.id}`}>
+    <Link className='flex flex-col' to={`/popup/product/${product.auctionId}`}>
       <ProductImage product={product} />
       <div className='flex flex-col px-0.5 mt-1'>
         <span className='text-gray-800 text-sm'>{title}</span>
@@ -30,7 +29,7 @@ function ProductItemVertical({ product }) {
             </div>
           </div>
           <span className='text-gray-600 text-sm'>
-            {dday(product.closeAt)} 남음
+            {dday(product.endTime)} 남음
           </span>
         </div>
       </div>

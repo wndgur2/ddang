@@ -3,15 +3,15 @@ import { dday } from '../../../utils/Dday'
 import { Link } from 'react-router-dom'
 
 function HomeMainProduct({ product, index, size }) {
-  const price = Intl.NumberFormat('ko-KR').format(product.price)
+  const price = Intl.NumberFormat('ko-KR').format(product.currentBidPrice)
   return (
     <Link
-      to={`/popup/product/${product.id}`}
+      to={`/popup/product/${product.auctionId}`}
       className='relative aspect-square w-full flex-shrink-0 snap-center'
     >
       <div className='bg-white brightness-96'>
         <img
-          src={product.image}
+          src={product.photo}
           alt='product'
           className='aspect-square w-full object-contain'
         />
@@ -22,7 +22,7 @@ function HomeMainProduct({ product, index, size }) {
       >
         <div className='flex justify-between text-sm text-gray-50'>
           <span>{'twinkay'}님을 위한 상품</span>
-          <span>{dday(product.closeAt)} 남음</span>
+          <span>{dday(product.endTime)} 남음</span>
         </div>
         <p className='text-lg font-bold text-gray-100 mt-4'>{product.name}</p>
         <div className='flex justify-between items-end text-sm '>

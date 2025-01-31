@@ -6,20 +6,7 @@ import ProfileSmall from '../../user/components/ProfileSmall.jsx'
 import Slider from '../../../components/Slider.jsx'
 import MaterialIcon from '../../../components/icons/MaterialIcon.jsx'
 import ProductItemSmall from '../components/ProductItemSmall.jsx'
-
-const exampleItem = {
-  id: 1,
-  title: '이상한 헤드셋 동생꺼',
-  name: 'TOOCKI Wireless Headphone',
-  price: 15000,
-  isTop: true,
-  closeAt: '2025-02-02T11:50:59',
-  image:
-    'https://github.com/user-attachments/assets/82b31bc1-d2ae-45a0-8b12-8d96e6666e45',
-  bidderCount: 7,
-  bidCount: 11,
-  isFavorite: true,
-}
+import products from '../data/products.js'
 
 function ProductDetailPage({ product = example }) {
   usePageName('제품상세')
@@ -114,11 +101,9 @@ function ProductDetailPage({ product = example }) {
             className='flex flex-row gap-2 pb-1
         overflow-x-scroll snap-x snap-madatory'
           >
-            <ProductItemSmall product={exampleItem} />
-            <ProductItemSmall product={{ ...exampleItem, id: 2 }} />
-            <ProductItemSmall product={{ ...exampleItem, id: 3 }} />
-            <ProductItemSmall product={{ ...exampleItem, id: 4 }} />
-            <ProductItemSmall product={{ ...exampleItem, id: 5 }} />
+            {products.map((product, i) => (
+              <ProductItemSmall product={{ ...product, id: i }} key={i} />
+            ))}
           </div>
         </div>
       </div>

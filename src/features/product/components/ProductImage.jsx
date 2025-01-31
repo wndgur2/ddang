@@ -11,7 +11,7 @@ function ProductImage({ product }) {
         <FavoriteIcon liked={product.isFavorite} />
       </div>
       <img
-        src={product.image}
+        src={product.photo}
         alt={product.title}
         className='h-full object-contain'
       />

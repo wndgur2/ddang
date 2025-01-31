@@ -17,7 +17,7 @@ function HomeBiddingList() {
         overflow-x-scroll snap-x snap-madatory'
       >
         {products.map(product => (
-          <ProductItemSmall key={product.id} product={product} />
+          <ProductItemSmall key={product.auctionId} product={product} />
         ))}
       </div>
     </div>
