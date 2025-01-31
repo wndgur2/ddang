@@ -14,12 +14,12 @@ function ProductListItem({ product }) {
       </div>
       <div className='flex flex-col w-full py-0.5 justify-between'>
         <div className='flex justify-between'>
-          <p>{title}</p>
-          <p className='text-sm text-gray-700'>{dday(product.closeAt)} 전</p>
+          <p className='font-bold text-gray-900 tracking-tight'>{title}</p>
+          <p className='text-sm text-gray-700'>{dday(product.closeAt)} 남음</p>
         </div>
         <div className='flex justify-between'>
           <div>
-            <p className='text-lg font-semibold mt-2 text-gray-950'>
+            <p className='text-lg font-semibold mt-2 mb-0.5 text-gray-950 leading-none'>
               {price}원
             </p>
             <p className='text-sm text-gray-600'>즉시낙찰가 20,800원</p>
