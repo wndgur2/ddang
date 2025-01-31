@@ -3,12 +3,16 @@ import ProductImage from './ProductImage'
 import { trimText } from '../../../utils/trimText'
 import { dday } from '../../../utils/Dday'
 import MaterialIcon from '../../../components/icons/MaterialIcon'
+import { Link } from 'react-router-dom'
 
 function ProductListItem({ product }) {
   const title = trimText(product.title, 14)
   const price = Intl.NumberFormat('ko-KR').format(product.price)
   return (
-    <div className='flex p-4 gap-3 border-b border-gray-200'>
+    <Link
+      className='flex p-4 gap-3 border-b border-gray-200'
+      to={`/popup/product/${product.id}`}
+    >
       <div className='size-24'>
         <ProductImage product={product} />
       </div>
@@ -38,7 +42,7 @@ function ProductListItem({ product }) {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

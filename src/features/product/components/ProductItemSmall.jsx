@@ -3,12 +3,14 @@ import { dday } from '@/utils/Dday'
 import MaterialIcon from '@/components/icons/MaterialIcon'
 import { wonitzie } from '@/utils/wonitize'
 import { trimText } from '@/utils/trimText'
+import { Link } from 'react-router-dom'
 
 function ProductItemSmall({ product }) {
   const price = wonitzie(product.price)
   const title = trimText(product.title, 7)
   return (
-    <div
+    <Link
+      to={`/popup/product/${product.id}`}
       className='flex flex-col flex-shrink-0 snap-center whitespace-nowrap text-sm'
       style={{
         width: 'calc(33% - var(--spacing))',
@@ -43,7 +45,7 @@ function ProductItemSmall({ product }) {
       <span className='text-sm text-gray-600 mt-0.5 w-fit'>
         {dday(product.closeAt)} 남음
       </span>
-    </div>
+    </Link>
   )
 }
 
