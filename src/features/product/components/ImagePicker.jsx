@@ -27,7 +27,7 @@ function ImagePicker({ images, setImages }) {
             name='photo_camera'
             filled
             size={32}
-            color={'var(--color-gray-400)'}
+            className={'text-gray-400'}
           />
           <span
             className={`text-xs whitespace-nowrap ${
