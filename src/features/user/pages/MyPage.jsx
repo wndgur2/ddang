@@ -33,7 +33,7 @@ function MyPage() {
           <img src={payDdang} alt='payDdang' className='size-20' />
         </div>
         <div className='flex items-center justify-between'>
-          <div className='flex items-center space-x-2'>
+          <div className='flex items-center gap-1'>
             <img src={moneyBag2} alt='moneyBag2' className='w-6 h-6' />
             <span className='text-lg  font-bold text-[16px] text-gray-950'>
               땅땅머니
