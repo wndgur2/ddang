@@ -1,5 +1,5 @@
 import products from '../data/products'
-import Slider from '../../../components/Slider'
+import Slider from '@/components/Slider'
 import HomeMainProduct from './HomeMainProduct'
 
 function HomeMainSlider() {

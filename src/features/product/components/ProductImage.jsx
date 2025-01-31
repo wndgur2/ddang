@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import FavoriteButton from '../../../components/icons/FavoriteButton'
+import FavoriteButton from '@/components/icons/FavoriteButton'
 
 function ProductImage({ product, heartSize = 32 }) {
   return (

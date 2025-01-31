@@ -1,6 +1,6 @@
 import logo from '@/assets/images/logo.png'
 import trademark from '@/assets/images/trademark.png'
-import DefaultButton from '../../../components/buttons/DefaultButton'
+import DefaultButton from '@/components/buttons/DefaultButton'
 import { Link, useNavigate } from 'react-router-dom'
 
 function WelcomePage() {

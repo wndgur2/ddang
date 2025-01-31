@@ -1,4 +1,4 @@
-import usePageName from '../../../hooks/usePageName.js'
+import usePageName from '@/hooks/usePageName.js'
 import transactions from '../data/transactions.js'
 /** data
 {

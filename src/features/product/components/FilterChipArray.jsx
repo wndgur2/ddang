@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import MaterialIcon from '../../../components/icons/MaterialIcon'
+import MaterialIcon from '@/components/icons/MaterialIcon'
 
 function FilterChipArray({ values, index }) {
   return (

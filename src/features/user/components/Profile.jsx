@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import ProfileImage from './ProfileImage'
-import MaterialIcon from '../../../components/icons/MaterialIcon'
+import MaterialIcon from '@/components/icons/MaterialIcon'
 import TrustScoreBar from './TrustScoreBar'
 
 function Profile({ profileSrc, name, trustScore, id }) {

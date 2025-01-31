@@ -2,7 +2,7 @@ import { useState } from 'react'
 import FilterChipArray from '../components/FilterChipArray.jsx'
 import FilterChipBool from '../components/FilterChipBool.jsx'
 import ProductListItem from '../components/ProductListItem.jsx'
-import MaterialIcon from '../../../components/icons/MaterialIcon.jsx'
+import MaterialIcon from '@/components/icons/MaterialIcon.jsx'
 import productsData from '../data/products.js'
 import PropTypes from 'prop-types'
 

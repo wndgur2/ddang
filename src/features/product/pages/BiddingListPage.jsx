@@ -1,5 +1,5 @@
 import usePageName from '@/hooks/usePageName'
-import TabBar from '../../../components/navbar/TabBar'
+import TabBar from '@/components/navbar/TabBar'
 import { Outlet } from 'react-router-dom'
 
 function BiddingListPage() {

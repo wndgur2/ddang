@@ -1,6 +1,6 @@
 import handstandingMole from '@/assets/images/handstandingMole.png'
 import EditProfileImage from '../components/EditProfileImage'
-import usePageName from '../../../hooks/usePageName'
+import usePageName from '@/hooks/usePageName'
 
 function EditProfilePage() {
   usePageName('프로필 수정')

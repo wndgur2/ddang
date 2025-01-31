@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import usePageName from '../../../hooks/usePageName'
+import usePageName from '@/hooks/usePageName'
 import Charge from '../components/Charge'
 
 function ChargePage() {
