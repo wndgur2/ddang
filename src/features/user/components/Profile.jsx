@@ -15,16 +15,15 @@ function Profile({ profileSrc, name, trustScore, id }) {
         <div className='flex flex-row justify-between items-center w-full ml-4'>
           <p className='text-base font-semibold'>{name}</p>
           {userId === id ? (
-            <Link to='/popup/mypage/edit-profile'>
+            <Link to='/mypage/edit-profile'>
               <button
                 style={{
-                  className: 'text-gray-400',
                   width: '24px',
                   height: '24px',
                   cursor: 'pointer',
                 }}
               >
-                <MaterialIcon name='edit' filled>
+                <MaterialIcon name='edit' filled className='text-gray-400'>
                   edit
                 </MaterialIcon>
               </button>

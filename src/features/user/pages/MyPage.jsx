@@ -4,8 +4,8 @@ import usePageName from '@/hooks/usePageName'
 import profileImage from '@/assets/images/profileImage.png'
 import Profile from '../components/Profile'
 import moneyBag2 from '@/assets/images/moneyBag2.png'
-import menus from '../data/menus'
 import payDdang from '@/assets/images/payDdang.png'
+import menus from '../data/menus'
 
 function MyPage() {
   usePageName('마이페이지')
@@ -41,12 +41,10 @@ function MyPage() {
           </div>
           <div>
             <Link
-              to='/popup/mypage/charge'
-              className='bg-gray-100 text-gray-950 text-sm px-3 py-2 rounded-full'
-              style={{ 
-                 cursor: 'pointer',
-                 background:
-                  'linear-gradient(78deg,rgb(223, 245, 252) -6.81%, #F7E2FF 92.48%)',
+              to='/mypage/charge'
+              className='bg-gray-100 text-gray-950 text-sm px-3 py-2 rounded-full font-bold'
+              style={{
+                cursor: 'pointer',
               }}
             >
               충전
