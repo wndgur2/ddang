@@ -16,7 +16,7 @@ function MyPage() {
         profileSrc={profileImage}
         name='성시경이타고있어요'
         trustScore={78}
-        id={123}
+        id={1}
       />
       <hr className='border-gray-200' />
 
@@ -25,14 +25,14 @@ function MyPage() {
         <div className='flex items-center justify-between'>
           <div className='flex items-center space-x-2'>
             <img src={moneyBag2} alt='moneyBag2' className='w-6 h-6' />
-            <span className='text-lg  font-bold text-[16px] text-gray-950'>
+            <span className='text-lg  font-bold text-lg text-gray-950'>
               땅땅머니
             </span>
           </div>
           <div>
             <Link
               to='charge'
-              className='bg-gray-100 text-gray-950 text-xs px-2 py-1 rounded-full'
+              className='bg-gray-100 text-gray-950 text-sm px-3 py-2 rounded-full'
               style={{ cursor: 'pointer' }}
             >
               충전
@@ -40,11 +40,11 @@ function MyPage() {
           </div>
         </div>
         <div className='mt-2'>
-          <div className='flex justify-between  font-bold text-[14px] text-gray-950 mt-4'>
+          <div className='flex justify-between font-bold text-base text-gray-950 mt-4'>
             <span>잔액</span>
             <span>270,000원</span>
           </div>
-          <div className='flex justify-between  font-bold text-[14px] text-gray-950 mt-4'>
+          <div className='flex justify-between font-bold text-base text-gray-950 mt-4'>
             <span>입찰가능금액</span>
             <span>70,000원</span>
           </div>

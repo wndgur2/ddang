@@ -15,6 +15,7 @@ import NotFoundPage from './pages/NotFoundPage'
 import SignupPage from './features/user/pages/SignupPage'
 import LoginPage from './features/user/pages/LoginPage'
 import ProductListPage from './features/product/pages/ProductListPage'
+import EditProfilePage from './features/user/pages/EditProfilePage'
 
 function App() {
   initFCM()
@@ -37,6 +38,7 @@ function App() {
           <Route path='product/:id' element={<ProductDetailPage />} />
           <Route path='signup' element={<SignupPage />} />
           <Route path='login' element={<LoginPage />} />
+          <Route path='mypage/edit-profile' element={<EditProfilePage />} />
         </Route>
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
