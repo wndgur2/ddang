@@ -154,7 +154,7 @@ export default [
     bidderCount: 1,
     bidCount: 2,
     startTime: '2025-01-21 06:30:00',
-    endTime: '2025-02-21 06:30:00',
+    endTime: '2025-01-21 06:30:00',
     photo:
       'https://github.com/user-attachments/assets/c46f7a84-db99-41e7-858a-335c596aa054',
     isFavorite: true,

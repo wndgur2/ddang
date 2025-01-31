@@ -32,7 +32,22 @@ function App() {
           <Route path='search/products' element={<ProductListPage />} />
         </Route>
         <Route path='/' element={<DefaultLayout />}>
-          <Route path='bidding-list' element={<BiddingListPage />} />
+          <Route path='bidding-list' element={<BiddingListPage />}>
+            <Route
+              index
+              element={
+                <ProductListPage filter={product => product.myBidPrice} />
+              }
+            />
+            <Route
+              path='sell'
+              element={
+                <ProductListPage
+                  filter={product => product.endTime < new Date().toISOString()}
+                />
+              }
+            />
+          </Route>
           <Route path='mypage' element={<MyPage />} />
         </Route>
         <Route path='/popup' element={<DefaultLayout back />}>

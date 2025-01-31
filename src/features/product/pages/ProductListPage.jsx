@@ -2,13 +2,15 @@ import { useState } from 'react'
 import FilterChipArray from '../components/FilterChipArray.jsx'
 import FilterChipBool from '../components/FilterChipBool.jsx'
 import ProductListItem from '../components/ProductListItem.jsx'
-import products from '../data/products.js'
 import MaterialIcon from '../../../components/icons/MaterialIcon.jsx'
+import productsData from '../data/products.js'
+import PropTypes from 'prop-types'
 
-function ProductListPage() {
+function ProductListPage({ filter = _ => _ }) {
   const [isBidding, setIsBidding] = useState(false)
   const [category, setCategory] = useState('')
   const [dealType, setDealType] = useState('')
+  const products = productsData.filter(filter)
   return (
     <div className='flex flex-col'>
       <div className='flex px-4 pt-3 pb-2 justify-between items-center'>
@@ -38,6 +40,10 @@ function ProductListPage() {
       </div>
     </div>
   )
+}
+
+ProductListPage.propTypes = {
+  filter: PropTypes.func,
 }
 
 export default ProductListPage

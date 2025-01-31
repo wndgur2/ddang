@@ -4,7 +4,7 @@ import NavButton from './NavButton'
 
 function Navbar() {
   const getClassName = ({ isActive }) => {
-    return `w-1/5 ${isActive ? style.active : style.inactive}`
+    return `w-1/5 ${isActive ? 'text-gray-900' : 'text-gray-500'}`
   }
   const navs = [
     { to: '/explore', iconName: 'home', text: '홈', end: true },
