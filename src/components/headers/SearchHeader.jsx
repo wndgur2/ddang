@@ -24,15 +24,15 @@ function SearchHeader() {
         icon={{
           name: 'notifications',
           size: 28,
-          color: 'var(--color-gray-600)',
+          className: 'text-gray-600',
         }}
-        callback={() => route('/')}
+        onClick={() => route('/')}
       />
       <IconButton
         icon={{
           name: 'forum',
           size: 28,
-          color: 'var(--color-gray-600)',
+          className: 'text-gray-600',
         }}
       />
     </header>

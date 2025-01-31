@@ -18,7 +18,7 @@ function Profile({ profileSrc, name, trustScore, id }) {
             <Link to='/popup/mypage/edit-profile'>
               <button
                 style={{
-                  color: 'var(--color-gray-400)',
+                  className: 'text-gray-400',
                   width: '24px',
                   height: '24px',
                   cursor: 'pointer',

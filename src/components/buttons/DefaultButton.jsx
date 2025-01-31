@@ -1,10 +1,18 @@
 import PropTypes from 'prop-types'
 
-function DefaultButton({ children, callback }) {
+function DefaultButton({ children, onClick, type }) {
   return (
     <button
-      className='w-full p-3 bg-ddblue-400 rounded-lg text-white'
-      onClick={callback}
+      className={`w-full p-3 rounded-lg ${
+        type === undefined
+          ? 'text-white bg-ddblue-400'
+          : type === 'gray'
+          ? 'text-black bg-gray-200'
+          : type === 'red'
+          ? 'text-white bg-ddred-500'
+          : 'text-white bg-ddblue-400'
+      }`}
+      onClick={onClick}
     >
       {children}
     </button>
@@ -13,7 +21,8 @@ function DefaultButton({ children, callback }) {
 
 DefaultButton.propTypes = {
   children: PropTypes.node,
-  callback: PropTypes.func,
+  onClick: PropTypes.func,
+  type: PropTypes.string,
 }
 
 export default DefaultButton

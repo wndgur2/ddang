@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import MaterialIcon from '../icons/MaterialIcon'
 
-function IconButton({ icon, callback }) {
+function IconButton({ icon, onClick }) {
   return (
-    <button className='flex items-center justify-center' onClick={callback}>
+    <button className='flex items-center justify-center' onClick={onClick}>
       <MaterialIcon {...icon} />
     </button>
   )
@@ -11,7 +11,7 @@ function IconButton({ icon, callback }) {
 
 IconButton.propTypes = {
   icon: PropTypes.object,
-  callback: PropTypes.func,
+  onClick: PropTypes.func,
 }
 
 export default IconButton

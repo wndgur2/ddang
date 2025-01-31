@@ -53,7 +53,16 @@
 
 input,
 textarea {
-  outline-color: var(--color-ddblue-400);
+  border-color: var(--color-gray-300);
+  outline: none;
+
+  transition: border-color 0.2s;
+}
+
+
+input:focus,
+textarea:focus {
+  border-color: var(--color-ddblue-400);
 }
 
 label {
