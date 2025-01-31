@@ -5,17 +5,7 @@ import { trimText } from '../../../utils/trimText'
 import ProductImage from './ProductImage'
 import { Link } from 'react-router-dom'
 
-function ProductItemVertical({
-  product = {
-    title: '헤라 써머 라일락 (새제품)',
-    price: 362000,
-    bidderCount: 7,
-    bidCount: 11,
-    closeAt: '2025-01-21 06:30:00',
-    image:
-      'https://github.com/user-attachments/assets/385c4963-7272-4c8b-bbfc-0d8c9243bf87',
-  },
-}) {
+function ProductItemVertical({ product }) {
   const title = trimText(product.title, 15)
   const price = new Intl.NumberFormat('ko-KR').format(product.price)
   return (

@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types'
 import { dday } from '../../../utils/Dday'
+import { Link } from 'react-router-dom'
 
 function HomeMainProduct({ product, index, size }) {
   const price = Intl.NumberFormat('ko-KR').format(product.price)
   return (
-    <div className='relative aspect-square w-full flex-shrink-0 snap-center'>
+    <Link
+      to={`/popup/product/${product.id}`}
+      className='relative aspect-square w-full flex-shrink-0 snap-center'
+    >
       <div className='bg-white brightness-96'>
         <img
           src={product.image}
@@ -28,7 +32,7 @@ function HomeMainProduct({ product, index, size }) {
           </span>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 
