@@ -1,10 +1,11 @@
 import { Link, useNavigate } from 'react-router-dom'
-import DefaultButton from '../../../components/buttons/DefaultButton'
-import TextInput from '../../../components/form/TextInput'
-import usePageName from '../../../hooks/usePageName'
+import DefaultButton from '@/components/buttons/DefaultButton'
+import TextInput from '@/components/form/TextInput'
+import usePageName from '@/hooks/usePageName'
 import googleIcon from '@/assets/images/oauth/google.png'
 import kakaoIcon from '@/assets/images/oauth/kakao.png'
 import naverIcon from '@/assets/images/oauth/naver.png'
+import StickyContainer from '@/components/StickyContainer'
 
 function LoginPage() {
   usePageName('로그인')
@@ -22,7 +23,7 @@ function LoginPage() {
         </div>
         <Link to='/popup/signup'>회원가입</Link>
       </div>
-      <div className='fixed left-0 bottom-0 w-full flex flex-col gap-4 p-4'>
+      <StickyContainer>
         <div className='flex flex-row justify-between rounded-lg p-3 border-1 border-[#747775]'>
           <img
             width='24'
@@ -56,7 +57,7 @@ function LoginPage() {
           네이버 로그인
           <div className='p-2 '></div>
         </div>
-      </div>
+      </StickyContainer>
     </div>
   )
 }

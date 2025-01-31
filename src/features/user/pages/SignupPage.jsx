@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import DefaultButton from '../../../components/buttons/DefaultButton'
 import TextInput from '../../../components/form/TextInput'
 import usePageName from '../../../hooks/usePageName'
+import StickyContainer from '../../../components/StickyContainer'
 
 function SignupPage() {
   usePageName('회원가입')
@@ -13,7 +14,7 @@ function SignupPage() {
       <TextInput label='이름' required />
       <TextInput label='비밀번호' required type='password' />
       <TextInput label='비밀번호 확인' required type='password' />
-      <div className='fixed left-0 bottom-0 w-full p-4 bg-white border-t border-gray-200'>
+      <StickyContainer>
         <DefaultButton
           onClick={() =>
             route('/explore', {
@@ -23,7 +24,7 @@ function SignupPage() {
         >
           회원가입
         </DefaultButton>
-      </div>
+      </StickyContainer>
     </div>
   )
 }
