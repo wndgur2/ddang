@@ -12,6 +12,7 @@ function BiddingListPage() {
             index: true,
             name: '입찰중인 상품',
             to: '',
+            end: true,
           },
           {
             name: '낙찰된 상품',

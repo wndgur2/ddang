@@ -10,7 +10,12 @@ function TabBar({ routes }) {
   return (
     <div className='flex gap-4 px-4 py-2'>
       {routes.map((route, index) => (
-        <NavLink key={index} to={route.to} className={getClassName}>
+        <NavLink
+          key={index}
+          to={route.to}
+          className={getClassName}
+          end={route.end}
+        >
           {route.name}
         </NavLink>
       ))}
