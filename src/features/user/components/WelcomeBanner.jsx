@@ -31,7 +31,7 @@ function WelcomeBanner() {
             name='check_circle'
             size={64}
             filled
-            color={'var(--color-ddblue-400'}
+            className={'text-ddblue-400'}
           />
           <span className='text-2xl font-bold text-center text-gray-700'>
             회원가입이 완료되었습니다!

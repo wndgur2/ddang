@@ -15,7 +15,7 @@ function RegisteredImage({ src, deleteFunc }) {
         className='absolute translate-x-1/1 -translate-y-1/1
         flex p-0.5 bg-gray-100 rounded-full border border-gray-600'
       >
-        <MaterialIcon name='close' size={18} color={'var(--color-gray-600)'} />
+        <MaterialIcon name='close' size={18} className={'text-gray-600'} />
       </button>
     </div>
   )
