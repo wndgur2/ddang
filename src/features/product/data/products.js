@@ -1,10 +1,11 @@
 export default [
   {
     auctionId: 12,
-    title: '갤럭시 탭 S9',
+    title: '갤탭 S9 s급',
+    productName: '갤럭시 탭 S9 256GB Cellular',
     minimumBid: 200000,
     currentBidPrice: 362000,
-    'instantHammerPrice ': 450000,
+    instantHammerPrice: 450000,
     myBidPrice: 362000,
     bidderCount: 7,
     bidCount: 11,
@@ -17,9 +18,10 @@ export default [
   {
     auctionId: 13,
     title: '갤럭시 S24 울트라라',
+    productName: '갤럭시 S24 울트라 512GB',
     minimumBid: 1200000,
     currentBidPrice: 1362000,
-    'instantHammerPrice ': 1450000,
+    instantHammerPrice: 1450000,
     myBidPrice: 1362000,
     bidderCount: 7,
     bidCount: 11,
@@ -32,9 +34,10 @@ export default [
   {
     auctionId: 14,
     title: '갤럭시 워치',
+    productName: '갤럭시 워치7 44mm',
     minimumBid: 200000,
     currentBidPrice: 362000,
-    'instantHammerPrice ': 450000,
+    instantHammerPrice: 450000,
     myBidPrice: null,
     bidderCount: 7,
     bidCount: 11,
@@ -47,6 +50,7 @@ export default [
   {
     auctionId: 15,
     title: '아이패드 신형입니다.',
+    productName: '아이패드 에어 9세대',
     minimumBid: 500000,
     currentBidPrice: 620000,
     instantHammerPrice: 700000,
@@ -62,6 +66,7 @@ export default [
   {
     auctionId: 16,
     title: '삼성 비스포크 냉장고',
+    productName: '삼성 비스포크 185L',
     minimumBid: 1000000,
     currentBidPrice: 1200000,
     instantHammerPrice: 1500000,
@@ -77,6 +82,7 @@ export default [
   {
     auctionId: 18,
     title: '겨울 코트 울',
+    productName: '버버리 리버시블 체크 울 코트',
     minimumBid: 100000,
     currentBidPrice: 150000,
     instantHammerPrice: 200000,
@@ -92,6 +98,7 @@ export default [
   {
     auctionId: 19,
     title: '사과 맥스',
+    productName: 'Apple 에어팟 맥스',
     minimumBid: 800000,
     currentBidPrice: 900000,
     instantHammerPrice: 1000000,
@@ -107,6 +114,7 @@ export default [
   {
     auctionId: 20,
     title: '가을 코트 남자',
+    productName: '무신사 스탠다드 캐시미어 코트',
     minimumBid: 120000,
     currentBidPrice: 180000,
     instantHammerPrice: 250000,
@@ -121,7 +129,8 @@ export default [
   },
   {
     auctionId: 21,
-    title: '게이밍 헤드셋',
+    title: '게이밍 헤드셋 하루 사용',
+    productName: '녹스 게이밍 헤드셋',
     minimumBid: 50000,
     currentBidPrice: 80000,
     instantHammerPrice: 100000,
@@ -137,6 +146,7 @@ export default [
   {
     auctionId: 22,
     title: '스피커 오래된 것',
+    productName: '브리츠 와이어 스피커',
     minimumBid: 30000,
     currentBidPrice: 50000,
     instantHammerPrice: 70000,

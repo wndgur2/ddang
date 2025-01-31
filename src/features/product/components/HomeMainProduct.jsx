@@ -24,7 +24,9 @@ function HomeMainProduct({ product, index, size }) {
           <span>{'twinkay'}님을 위한 상품</span>
           <span>{dday(product.endTime)} 남음</span>
         </div>
-        <p className='text-lg font-bold text-gray-100 mt-4'>{product.name}</p>
+        <p className='text-lg font-bold text-gray-100 mt-4'>
+          {product.productName}
+        </p>
         <div className='flex justify-between items-end text-sm '>
           <span className='text-xl font-bold tracking-wide'>{price}원</span>
           <span className='text-gray-50'>

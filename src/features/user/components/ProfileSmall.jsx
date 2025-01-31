@@ -3,7 +3,7 @@ import ProfileImage from './ProfileImage'
 
 function ProfileSmall({ user }) {
   const icon =
-    user.reliability > 70 ? '😁' : user.reliability > 40 ? '😊' : '😒'
+    user.reliability > 70 ? '😁' : user.reliability > 50 ? '😊' : '😒'
   return (
     <div className='flex items-center justify-between'>
       <div className='flex items-center gap-2'>

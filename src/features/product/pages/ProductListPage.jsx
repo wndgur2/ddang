@@ -33,7 +33,7 @@ function ProductListPage() {
       </div>
       <div className='flex flex-col'>
         {products.map(product => (
-          <ProductListItem key={product.id} product={product} />
+          <ProductListItem key={product.auctionId} product={product} />
         ))}
       </div>
     </div>
