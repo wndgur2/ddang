@@ -17,7 +17,7 @@ function MyPage() {
         profileSrc={profileImage}
         name='성시경이타고있어요'
         trustScore={78}
-        id={123}
+        id={1}
       />
       <hr className='border-gray-200' />
 
@@ -35,17 +35,17 @@ function MyPage() {
         <div className='flex items-center justify-between'>
           <div className='flex items-center gap-1'>
             <img src={moneyBag2} alt='moneyBag2' className='w-6 h-6' />
-            <span className='text-lg  font-bold text-[16px] text-gray-950'>
+            <span className='text-lg  font-bold text-lg text-gray-950'>
               땅땅머니
             </span>
           </div>
           <div>
             <Link
-              to='charge'
-              className='bg-gray-50 text-gray-950 text-sm px-3 py-2 rounded-xl font-bold'
-              style={{
-                cursor: 'pointer',
-                background:
+              to='/popup/mypage/charge'
+              className='bg-gray-100 text-gray-950 text-sm px-3 py-2 rounded-full'
+              style={{ 
+                 cursor: 'pointer',
+                 background:
                   'linear-gradient(78deg,rgb(223, 245, 252) -6.81%, #F7E2FF 92.48%)',
               }}
             >

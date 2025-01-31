@@ -6,7 +6,7 @@ function MyPageMenu({ icon, title, to }) {
   return (
     <Link to={to} className='flex items-center gap-2 p-4'>
       <MaterialIcon {...icon} />
-      <span className=' font-bold text-[16px] text-gray-950'>{title}</span>
+      <span className=' font-bold text-base text-gray-950'>{title}</span>
     </Link>
   )
 }

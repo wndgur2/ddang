@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import ProfileImage from './ProfileImage'
 import MaterialIcon from '../../../components/icons/MaterialIcon'
 import TrustScoreBar from './TrustScoreBar'
-import StepTrustBar from './StepTrustBar'
 
 function Profile({ profileSrc, name, trustScore, id }) {
   const userId = 1 // 로그인한 사용자의 id
@@ -14,9 +13,9 @@ function Profile({ profileSrc, name, trustScore, id }) {
       <div className='flex items-center'>
         <ProfileImage src={profileSrc} size={64} />
         <div className='flex flex-row justify-between items-center w-full ml-4'>
-          <p className='text-md font-semibold'>{name}</p>
+          <p className='text-base font-semibold'>{name}</p>
           {userId === id ? (
-            <Link to='edit-profile'>
+            <Link to='/popup/mypage/edit-profile'>
               <button
                 style={{
                   className: 'text-gray-400',
