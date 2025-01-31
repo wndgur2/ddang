@@ -12,7 +12,7 @@ import IconButton from '../../../components/buttons/IconButton.jsx'
 import FavoriteButton from '../../../components/icons/FavoriteButton.jsx'
 import DefaultButton from '../../../components/buttons/DefaultButton.jsx'
 import { dday } from '../../../utils/Dday.js'
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 
 function ProductDetailPage({ product = example }) {
   usePageName('제품상세')
@@ -28,11 +28,6 @@ function ProductDetailPage({ product = example }) {
   )
 
   // load product by id
-
-  const [inputPrice, setInputPrice] = useState(currentBidPrice)
-  const formattedInputPrice = useMemo(() => {
-    return Intl.NumberFormat('ko-KR').format(inputPrice)
-  }, [inputPrice])
 
   return (
     <div className='flex flex-col gap-2 pb-72'>
@@ -145,8 +140,6 @@ function ProductDetailPage({ product = example }) {
         <input
           type='number'
           placeholder={currentBidPrice}
-          value={inputPrice}
-          onChange={e => setInputPrice(e.target.value)}
           className='flex grow border-b-2 w-full font-bold text-end text-2xl'
         />
         <div className='flex gap-2 leading-none text-sm py-4'>

@@ -10,7 +10,7 @@ function SignupPage() {
   return (
     <div className='flex flex-col gap-4 p-4'>
       <TextInput label='별명' required />
-      <TextInput label='이메일' required />
+      <TextInput label='이메일' required type='email' />
       <TextInput label='이름' required />
       <TextInput label='비밀번호' required type='password' />
       <TextInput label='비밀번호 확인' required type='password' />

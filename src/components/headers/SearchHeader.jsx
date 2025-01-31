@@ -6,6 +6,7 @@ function SearchHeader() {
   const search = e => {
     e.preventDefault()
     route('/explore/search/products?search=' + e.target[0].value)
+    e.target[0].blur()
   }
   return (
     <header
