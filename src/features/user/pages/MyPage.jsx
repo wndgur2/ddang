@@ -31,7 +31,7 @@ function MyPage() {
           </div>
           <div>
             <Link
-              to='charge'
+              to='/popup/mypage/charge'
               className='bg-gray-100 text-gray-950 text-sm px-3 py-2 rounded-full'
               style={{ cursor: 'pointer' }}
             >

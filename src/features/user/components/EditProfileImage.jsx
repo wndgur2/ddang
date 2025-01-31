@@ -12,19 +12,23 @@ function EditProfileImage({ src, size }) {
         alt='EditProfileImage'
         className='object-cover w-full h-full'
       />
+
       <div
-        className='absoulte left-0 top-0 w-full bg-gray-300 bg-opacity-50 flex justify-center items-center'
-        style={{ height: '25%' }}
+        className='absolute bottom-0 left-0 w-full flex justify-center items-center'
+        style={{
+          height: '25%',
+          backgroundColor: 'rgba(209, 213, 219, 0.5)',
+        }}
       >
-        <MaterialIcon name='edit' />
+        <MaterialIcon name='edit' filled />
       </div>
     </div>
   )
 }
 
 EditProfileImage.propTypes = {
-  src: PropTypes.string,
-  size: PropTypes.number,
+  src: PropTypes.string.isRequired,
+  size: PropTypes.number.isRequired,
 }
 
 export default EditProfileImage

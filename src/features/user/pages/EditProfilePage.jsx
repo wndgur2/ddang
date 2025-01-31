@@ -1,4 +1,4 @@
-import handstandingMole from '@/assets/images/handstandingMole.png' // 이미지 import
+import handstandingMole from '@/assets/images/handstandingMole.png'
 import EditProfileImage from '../components/EditProfileImage'
 import usePageName from '../../../hooks/usePageName'
 
