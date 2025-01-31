@@ -2,15 +2,15 @@ import TabBar from '@/components/navbar/TabBar'
 import { Outlet } from 'react-router-dom'
 import usePageName from '../../../hooks/usePageName'
 
-function BiddingListPage() {
-  usePageName('입찰현황')
+function SellingListPage() {
+  usePageName('판매현황')
   return (
     <div className='flex flex-col'>
       <TabBar
         routes={[
           {
             index: true,
-            name: '입찰중인 상품',
+            name: '판매중인 상품',
             to: '',
             end: true,
           },
@@ -25,4 +25,4 @@ function BiddingListPage() {
   )
 }
 
-export default BiddingListPage
+export default SellingListPage

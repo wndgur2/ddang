@@ -18,6 +18,8 @@ import ProductListPage from './features/product/pages/ProductListPage'
 import EditProfilePage from './features/user/pages/EditProfilePage'
 import ChargePage from './features/user/pages/ChargePage'
 import PaymentHistory from './features/payment/pages/PaymentHistory'
+import DropDownLayout from './layouts/DropDownLayout'
+import SellingListPage from './features/product/pages/SellingListPage'
 
 function App() {
   initFCM()
@@ -31,7 +33,17 @@ function App() {
           <Route path='search' element={<SearchPage />} />
           <Route path='search/products' element={<ProductListPage />} />
         </Route>
-        <Route path='/' element={<DefaultLayout />}>
+        <Route
+          path='/'
+          element={
+            <DropDownLayout
+              routes={[
+                { name: '입찰현황', to: '/bidding-list' },
+                { name: '판매현황', to: '/selling-list' },
+              ]}
+            />
+          }
+        >
           <Route path='bidding-list' element={<BiddingListPage />}>
             <Route
               index
@@ -40,7 +52,7 @@ function App() {
               }
             />
             <Route
-              path='sell'
+              path='sold'
               element={
                 <ProductListPage
                   filter={product => product.endTime < new Date().toISOString()}
@@ -48,8 +60,27 @@ function App() {
               }
             />
           </Route>
+          <Route path='selling-list' element={<SellingListPage />}>
+            <Route
+              index
+              element={
+                <ProductListPage filter={product => product.myBidPrice} />
+              }
+            />
+            <Route
+              path='sold'
+              element={
+                <ProductListPage
+                  filter={product => product.endTime < new Date().toISOString()}
+                />
+              }
+            />
+          </Route>
+        </Route>
+        <Route path='/' element={<DefaultLayout />}>
           <Route path='mypage' element={<MyPage />} />
         </Route>
+
         <Route path='/popup' element={<DefaultLayout back />}>
           <Route path='product/register' element={<ProductRegisterPage />} />
           <Route path='product/:id' element={<ProductDetailPage />} />
