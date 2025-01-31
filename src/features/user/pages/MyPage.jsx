@@ -5,6 +5,7 @@ import profileImage from '@/assets/images/profileImage.png'
 import Profile from '../components/Profile'
 import moneyBag2 from '@/assets/images/moneyBag2.png'
 import menus from '../data/menus'
+import payDdang from '@/assets/images/payDdang.png'
 
 function MyPage() {
   usePageName('마이페이지')
@@ -21,7 +22,16 @@ function MyPage() {
       <hr className='border-gray-200' />
 
       {/* 땅땅머니 섹션 */}
-      <section className='p-4 bg-white border-b border-gray-200 mt-0'>
+      <section
+        className='relative p-4 bg-white border-b border-gray-200 mt-0'
+        style={{
+          background:
+            'linear-gradient(283deg, #BDF1FF 2.08%, #E8EEFF 48.59%, #E091FF 48.6%, #F2CCFF 94.74%)',
+        }}
+      >
+        <div className='absolute left-0 bottom-0 w-full flex justify-center'>
+          <img src={payDdang} alt='payDdang' className='size-20' />
+        </div>
         <div className='flex items-center justify-between'>
           <div className='flex items-center space-x-2'>
             <img src={moneyBag2} alt='moneyBag2' className='w-6 h-6' />
@@ -32,7 +42,7 @@ function MyPage() {
           <div>
             <Link
               to='charge'
-              className='bg-gray-100 text-gray-950 text-xs px-2 py-1 rounded-full'
+              className='bg-gray-50 text-gray-950 text-sm px-3 py-2 rounded-xl font-bold'
               style={{ cursor: 'pointer' }}
             >
               충전
@@ -40,12 +50,12 @@ function MyPage() {
           </div>
         </div>
         <div className='mt-2'>
-          <div className='flex justify-between  font-bold text-[14px] text-gray-950 mt-4'>
-            <span>잔액</span>
+          <div className='flex justify-between  font-bold text-gray-950 mt-4'>
+            <span className='text-sm'>잔액</span>
             <span>270,000원</span>
           </div>
-          <div className='flex justify-between  font-bold text-[14px] text-gray-950 mt-4'>
-            <span>입찰가능금액</span>
+          <div className='flex justify-between  font-bold text-gray-950 mt-4'>
+            <span className='text-sm'>입찰가능금액</span>
             <span>70,000원</span>
           </div>
         </div>
