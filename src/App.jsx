@@ -15,6 +15,7 @@ import NotFoundPage from './pages/NotFoundPage'
 import SignupPage from './features/user/pages/SignupPage'
 import LoginPage from './features/user/pages/LoginPage'
 import ProductListPage from './features/product/pages/ProductListPage'
+import PaymentHistory from './features/payment/pages/PaymentHistory'
 
 function App() {
   initFCM()
@@ -37,6 +38,9 @@ function App() {
           <Route path='product/:id' element={<ProductDetailPage />} />
           <Route path='signup' element={<SignupPage />} />
           <Route path='login' element={<LoginPage />} />
+        </Route>
+        <Route path='/mypage' element={<DefaultLayout back />}>
+          <Route path='payment-history' element={<PaymentHistory />} />
         </Route>
         <Route path='*' element={<NotFoundPage />} />
       </Routes>

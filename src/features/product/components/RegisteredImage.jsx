@@ -4,7 +4,7 @@ import MaterialIcon from '../../../components/icons/MaterialIcon'
 function RegisteredImage({ src, deleteFunc }) {
   return (
     <div
-      className='flex items-center w-[18%] aspect-square justify-center
+      className='relative flex items-center w-[18%] aspect-square justify-center
       rounded-lg overflow-hidden bg-gray-100'
     >
       <img src={src} alt='preview' className='object-cover' />
