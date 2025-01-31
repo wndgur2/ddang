@@ -16,7 +16,7 @@ function ModalPicker({ label, required }) {
             {required && '*'}
           </label>
         )}
-        <PickerWrapper callback={open}>
+        <PickerWrapper onClick={open}>
           <InputValue value={value} label={label} />
           <MaterialIcon name='chevron_right' />
         </PickerWrapper>

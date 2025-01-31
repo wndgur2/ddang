@@ -18,7 +18,7 @@ function DefaultHeader({ back, feature, siblings, title }) {
               name: 'keyboard_arrow_left',
               size: 28,
             }}
-            callback={() => {
+            onClick={() => {
               router(-1)
             }}
           />

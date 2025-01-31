@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 
-function PickerWrapper({ callback, children }) {
+function PickerWrapper({ onClick, children }) {
   return (
     <div
       className='flex justify-between items-center border-1 border-gray-300 rounded-md p-3'
-      onClick={callback}
+      onClick={onClick}
     >
       {children}
     </div>
@@ -12,7 +12,7 @@ function PickerWrapper({ callback, children }) {
 }
 
 PickerWrapper.propTypes = {
-  callback: PropTypes.func,
+  onClick: PropTypes.func,
   children: PropTypes.node,
 }
 

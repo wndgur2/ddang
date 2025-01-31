@@ -15,7 +15,7 @@ function SignupPage() {
       <TextInput label='비밀번호 확인' required type='password' />
       <div className='fixed left-0 bottom-0 w-full p-4 bg-white border-t border-gray-200'>
         <DefaultButton
-          callback={() =>
+          onClick={() =>
             route('/explore', {
               state: { welcome: true },
             })

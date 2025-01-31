@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 
-function DefaultButton({ children, callback }) {
+function DefaultButton({ children, onClick }) {
   return (
     <button
       className='w-full p-3 bg-ddblue-400 rounded-lg text-white'
-      onClick={callback}
+      onClick={onClick}
     >
       {children}
     </button>
@@ -13,7 +13,7 @@ function DefaultButton({ children, callback }) {
 
 DefaultButton.propTypes = {
   children: PropTypes.node,
-  callback: PropTypes.func,
+  onClick: PropTypes.func,
 }
 
 export default DefaultButton

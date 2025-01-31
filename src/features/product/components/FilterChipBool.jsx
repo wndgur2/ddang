@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 
-function FilterChipBool({ text, value, callback }) {
+function FilterChipBool({ text, value, onChange }) {
   return (
     <button
-      onClick={callback}
-      className={`flex w-fit items-center px-2 py-1 mr-2 text-sm bg-gray-100 ${
+      onClick={onChange}
+      className={`flex w-fit items-center px-2.5 mr-2 text-sm bg-gray-100 ${
         value ? 'font-bold text-ddblue-400' : 'text-gray-950'
       } rounded-lg`}
     >
@@ -16,7 +16,7 @@ function FilterChipBool({ text, value, callback }) {
 FilterChipBool.propTypes = {
   text: PropTypes.string.isRequired,
   value: PropTypes.bool.isRequired,
-  callback: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 }
 
 export default FilterChipBool

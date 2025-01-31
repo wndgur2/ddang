@@ -26,7 +26,7 @@ function SearchHeader() {
           size: 28,
           color: 'var(--color-gray-600)',
         }}
-        callback={() => route('/')}
+        onClick={() => route('/')}
       />
       <IconButton
         icon={{

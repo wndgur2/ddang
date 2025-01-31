@@ -15,7 +15,7 @@ function WelcomePage() {
         className='object-contain w-78 pb-24'
       />
       <div className='w-full flex flex-col gap-6 mb-3'>
-        <DefaultButton callback={() => route('/popup/signup')}>
+        <DefaultButton onClick={() => route('/popup/signup')}>
           시작하기
         </DefaultButton>
         <p className='text-center text-gray-400'>

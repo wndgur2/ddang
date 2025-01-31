@@ -14,7 +14,7 @@ function LoginPage() {
       <TextInput label='이메일' required />
       <TextInput label='비밀번호' required type='password' />
       <div className='mt-8 mb-3'>
-        <DefaultButton callback={() => route('/explore')}>로그인</DefaultButton>
+        <DefaultButton onClick={() => route('/explore')}>로그인</DefaultButton>
       </div>
       <div className='px-1 p-2 flex flex-row justify-between text-gray-500 text-sm'>
         <div className='flex flex-row gap-4'>
