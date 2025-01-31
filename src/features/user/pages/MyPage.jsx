@@ -26,7 +26,7 @@ function MyPage() {
         className='relative p-4 bg-white border-b border-gray-200 mt-0'
         style={{
           background:
-            'linear-gradient(283deg, #BDF1FF 2.08%, #E8EEFF 48.59%, #E091FF 48.6%, #F2CCFF 94.74%)',
+            'linear-gradient(295deg, #BDF1FF 2.08%, #E8EEFF 48.59%, #E091FF 48.6%, #F2CCFF 94.74%)',
         }}
       >
         <div className='absolute left-0 bottom-0 w-full flex justify-center'>
@@ -43,7 +43,11 @@ function MyPage() {
             <Link
               to='charge'
               className='bg-gray-50 text-gray-950 text-sm px-3 py-2 rounded-xl font-bold'
-              style={{ cursor: 'pointer' }}
+              style={{
+                cursor: 'pointer',
+                background:
+                  'linear-gradient(78deg,rgb(223, 245, 252) -6.81%, #F7E2FF 92.48%)',
+              }}
             >
               충전
             </Link>
