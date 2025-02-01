@@ -8,12 +8,16 @@ function SignupPage() {
   usePageName('회원가입')
   const route = useNavigate()
   return (
-    <div className='flex flex-col gap-4 p-4'>
-      <TextInput label='별명' required />
-      <TextInput label='이메일' required type='email' />
-      <TextInput label='이름' required />
-      <TextInput label='비밀번호' required type='password' />
-      <TextInput label='비밀번호 확인' required type='password' />
+    <div className='flex flex-col gap-6 p-4'>
+      <div>
+        <TextInput label='별명' required />
+        <TextInput label='이메일' required type='email' />
+        <TextInput label='이름' required />
+      </div>
+      <div>
+        <TextInput label='비밀번호' required type='password' />
+        <TextInput label='비밀번호 확인' required type='password' />
+      </div>
       <StickyContainer>
         <DefaultButton
           onClick={() =>

@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
 import MaterialIcon from '@/components/icons/MaterialIcon'
+import { Link } from 'react-router-dom'
 
-function HomeListHeader({ type }) {
+function HomeListHeader({ type, to }) {
   return (
-    <header
+    <Link
       className='flex flex-row items-center justify-between py-4 text-gray-900'
-      onClick={() => console.log(`${type.key} clicked`)}
+      to={to}
     >
       <div className='flex flex-row items-center gap-2'>
         <MaterialIcon name={type.icon} size={22} filled />
@@ -15,12 +16,13 @@ function HomeListHeader({ type }) {
         </span>
       </div>
       <MaterialIcon name='chevron_right' size={24} />
-    </header>
+    </Link>
   )
 }
 
 HomeListHeader.propTypes = {
   type: PropTypes.object.isRequired,
+  to: PropTypes.string,
 }
 
 export default HomeListHeader

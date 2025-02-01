@@ -6,7 +6,7 @@ import products from '../data/products'
 function HomeProductList({ type }) {
   return (
     <section>
-      <HomeListHeader type={type}></HomeListHeader>
+      <HomeListHeader type={type} to={type.to}></HomeListHeader>
       <div className='grid grid-cols-2 gap-4'>
         <div className='flex flex-col gap-4'>
           <ProductItemVertical product={products[0]} />

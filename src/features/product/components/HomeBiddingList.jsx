@@ -11,6 +11,7 @@ function HomeBiddingList() {
           title: ' 입찰 현황',
           icon: 'person_raised_hand',
         }}
+        to={'/bidding-list'}
       />
       <div
         className='flex flex-row gap-2 pb-1
