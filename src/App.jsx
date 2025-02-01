@@ -25,7 +25,10 @@ function App() {
   initFCM()
 
   return (
-    <div className={`w-full h-dvh mx-auto bg-white max-w-lg overflow-x-hidden`}>
+    <div
+      id='app'
+      className={`w-full h-dvh mx-auto bg-white max-w-lg overflow-x-hidden overflow-y-scroll`}
+    >
       <Routes>
         <Route path='/' element={<WelcomePage />} />
         <Route path='/explore' element={<ExploreLayout />}>
